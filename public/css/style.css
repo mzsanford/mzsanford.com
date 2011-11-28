@@ -1,8 +1,107 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+  background-image: -moz-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
+  background-image: -webkit-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
+  color: #555;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+div.header {
+  margin: 20px auto;
+  width: 800px;
+  min-height: 180px;
+  padding-top: 70px;
+  text-align: center;
+}
+
+div#footer {
+  width: 800px;
+  position: absolute;
+  bottom: 8px;
+  font-size: 16px;
+  font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
+}
+
+div#footer a {
+  text-decoration: none;
+}
+
+div#footer .copy {
+  float: left;
+}
+
+div#footer .contact {
+  float: right;
+}
+
+h1 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+}
+
+h1.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.description {
+  background: #F1F1F1;
+  background-image: -webkit-linear-gradient( #f8f8f8, #eee);
+  background-image: -moz-linear-gradient( #f8f8f8, #eee);
+  border-radius: 3px;
+  color: #666;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 6px 15px;
+}
+
+#contents {
+  padding: 20px;
+  background-color: #fff;
+  height: auto;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.menu {
+  border-bottom: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  margin-bottom: 25px;
+  padding: 10px;
+  text-align: right;
+  width: 800px;
+}
+
+.menu ol {
+  list-style-type: none;
+}
+
+.menu ol li {
+  display: inline-block;
+}
+
+.menu ol li a {
+  color: #111;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 4px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transition:color 0.15s ease-in; 
+}
+
+.menu ol li a:hover {
+  color: #36BCAB;
 }
