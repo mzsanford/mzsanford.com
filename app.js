@@ -17,6 +17,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  app.use('/blog', express.static(__dirname + '/posts'));
 });
 
 app.configure('development', function(){
@@ -28,9 +29,9 @@ app.configure('production', function(){
 });
 
 // Routes
-
 app.get('/', routes.index);
-app.get('/blog', routes.blog);
+app.get('/blog', routes.blogMain);
+app.get('/blog/:post', routes.blogPost);
 
 app.listen(process.env.PORT || 3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

@@ -1,2 +1,9 @@
-frameset
-  frame(src="http://mzsanford.wordpress.com/")
+
+h1 Blog main.
+
+a(href='/blog/unicode-security') Sample post.
+
+ol
+for post in posts
+  li
+    a(href='/blog/'+post.name)!= post.title  

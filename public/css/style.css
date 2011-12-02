@@ -10,7 +10,7 @@ a {
   color: #00B7FF;
 }
 
-div.header {
+header {
   margin: 20px auto;
   width: 800px;
   min-height: 180px;
@@ -18,7 +18,7 @@ div.header {
   text-align: center;
 }
 
-div#footer {
+footer {
   width: 800px;
   position: absolute;
   bottom: 8px;
@@ -26,23 +26,29 @@ div#footer {
   font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
 }
 
-div#footer a {
+footer a,
+header a {
   text-decoration: none;
+  color: #555;
 }
 
-div#footer .copy {
+footer a:hover,
+header a:hover {
+  text-decoration: none;
+  color: #00B7FF;
+  -webkit-transition:color 0.15s ease-in; 
+}
+
+footer .copy {
   float: left;
 }
 
-div#footer .contact {
+footer .contact {
   float: right;
 }
 
-h1 {
+header h1 {
   font-family: 'Oswald', Helvetica, Arial, sans-serif;
-}
-
-h1.title {
   text-align: center;
   font-weight: bold;
   font-size: 80px;
@@ -53,7 +59,7 @@ h1.title {
   margin: 20px;
 }
 
-.description {
+header h2 {
   background: #F1F1F1;
   background-image: -webkit-linear-gradient( #f8f8f8, #eee);
   background-image: -moz-linear-gradient( #f8f8f8, #eee);
@@ -73,24 +79,24 @@ h1.title {
   width: 800px;
 }
 
-.menu {
+nav {
   border-bottom: 1px solid #DDD;
   border-top: 1px solid #DDD;
   margin-bottom: 25px;
   padding: 10px;
-  text-align: right;
+  text-align: justify;
   width: 800px;
 }
 
-.menu ol {
+nav ol {
   list-style-type: none;
 }
 
-.menu ol li {
+nav ol li {
   display: inline-block;
 }
 
-.menu ol li a {
+nav ol li a {
   color: #111;
   font-family: 'Oswald', Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -102,6 +108,6 @@ h1.title {
   -webkit-transition:color 0.15s ease-in; 
 }
 
-.menu ol li a:hover {
-  color: #36BCAB;
+nav ol li a:hover {
+  color: #00B7FF;
 }

@@ -4,4 +4,9 @@ html(lang="en")
     title="Matt Sanford"
     link(href='http://fonts.googleapis.com/css?family=Oswald|Yanone+Kaffeesatz:200', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/css/style.css')
-  body!= body
+  body(class=bodyClass)
+    header
+      h1
+        a(href='/') Matt Sanford
+      h2 Available by prescription only
+    div#contents!= body
