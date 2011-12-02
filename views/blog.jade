@@ -1,9 +1,10 @@
 
-h1 Blog main.
-
-a(href='/blog/unicode-security') Sample post.
-
-ol
-for post in posts
-  li
-    a(href='/blog/'+post.name)!= post.title  
+ol.posts
+  for post in posts
+    li
+      h2
+        a(href='/blog/'+post.name)!= post.title
+        span.meta!= 'Posted: ' + post.date.getFullYear() + '/' + post.date.getMonth() + '/' + post.date.getDate()
+        span.meta Author:&nbsp;
+          a(href='http://twitter.com/mzsanford') @mzsanford
+      p!= post.snippet

@@ -18,18 +18,27 @@ fs.readdir(PostPath, function(err, files) {
       data.shift().split(/\n/).forEach(function(mdRow) {
         var m = mdRow.match(/^(\w+): (.*)$/);
         if (m) {
-          obj[m[1].toLowerCase()] = m[2];
+          var k = m[1].toLowerCase();
+          if (k == "date") {
+            obj[k] = new Date(m[2]);
+          } else {
+            obj[k] = m[2];
+          }
         }
       });
       obj.name = parts[0];
-      obj.markdown = data.join("\n\n");      
+      obj.snippet = markdown.toHTML(data[0]);
+      obj.body = markdown.toHTML(data.join("\n\n"));      
 
       blogPosts.byName[obj.name] = obj;
       blogPosts.directory.push(obj);
     }
   });
+  // Date ordered directory
   blogPosts.directory.sort(function(a,b) {
-    return a.date - b.date;
+    if (a.date > b.date) return -1;
+    if (a.date < b.date) return 1;
+    return 0;
   });
 });
 
@@ -52,7 +61,7 @@ module.exports = {
   blogMain: function(req, res) {
     res.render('blog', {
       posts: blogPosts.directory,
-      bodyClass: 'blogMain'
+      bodyClass: 'blog-main'
     });
   },
   
@@ -60,10 +69,10 @@ module.exports = {
     var post = blogPosts.byName[req.params.post];
 
     res.render('blog/post', {
-      content: markdown.toHTML(post.markdown),
+      content: post.body,
       title: post.title,
       date: post.date,
-      bodyClass: 'blogPost'
+      bodyClass: 'long-form blog-post'
     });
   }
 };
