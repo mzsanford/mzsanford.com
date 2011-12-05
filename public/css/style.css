@@ -25,6 +25,12 @@ a:hover {
   -moz-transition:color 0.15s ease-in;
 }
 
+@-webkit-keyframes animBreath {
+  50% {
+    color: #FF0800;
+  }
+}
+
 /* Heading (all pages) */
 
 header {
@@ -45,6 +51,11 @@ header h1 {
   letter-spacing: 1px;
   text-decoration: none;
   margin: 20px;
+}
+
+header h1 a {
+  -webkit-animation: animBreath 3s infinite ease-in-out 10s;
+  -moz-animation: animBreath 3s infinite ease-in-out 10s;
 }
 
 header h2 {
