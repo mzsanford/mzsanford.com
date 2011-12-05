@@ -46,6 +46,15 @@ var requestHost = function(req) {
 	return req.header('Host').split(/:/)[0];
 };
 
+/* Re-used route definition */
+var blogMain = function(req, res) {
+  res.render('blog', {
+    posts: blogPosts.directory,
+    bodyClass: 'blog-main'
+  })
+};
+
+
 /*
  * GET home page.
  */
@@ -58,12 +67,7 @@ module.exports = {
     }
   },
   
-  blogMain: function(req, res) {
-    res.render('blog', {
-      posts: blogPosts.directory,
-      bodyClass: 'blog-main'
-    });
-  },
+  blogMain: blogMain,
   
   blogPost: function(req, res) {
     var post = blogPosts.byName[req.params.post];
