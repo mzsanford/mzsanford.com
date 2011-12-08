@@ -54,8 +54,8 @@ header h1 {
 }
 
 header h1 a {
-  -webkit-animation: animBreath 3s infinite ease-in-out 10s;
-  -moz-animation: animBreath 3s infinite ease-in-out 10s;
+  -webkit-animation: animBreath 3s 1 ease-in-out 10s;
+  -moz-animation: animBreath 3s 1 ease-in-out 10s;
 }
 
 header h2 {
