@@ -9,7 +9,7 @@ I've ever worked on, [R2](https://github.com/mzsanford/r2rb)
 older posts knows that I'm interested in Arabic, and more specifically Arabic
 information processing. While talking about something unrelated I found out
 that Dustin Diaz ([@ded](http://twitter.com/ded),
-[dustindiaz.com](http://dustindiaz.com)) has written a Node.js module called
+[dustindiaz.com](http://dustindiaz.com) ) has written a Node.js module called
 [R2](https://github.com/ded/r2) for mirroring the appropriate CSS values
 needed to alter the directionality of a page. While this isn't a silver bullet
 it does do a very good job on pages that have successfully separated
