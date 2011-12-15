@@ -69,6 +69,13 @@ module.exports = {
   
   blogMain: blogMain,
   
+  feed: function(req, res) {
+    res.render('feed', {
+      posts: blogPosts.directory,
+      layout: false
+    })
+  },
+  
   blogPost: function(req, res) {
     var post = blogPosts.byName[req.params.post];
 
