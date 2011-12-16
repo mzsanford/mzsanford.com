@@ -171,6 +171,15 @@ body.blog-post article code {
   font-family: 'Courier', monospace;
 }
 
+body.blog-post article ul {
+  margin: 5px 20px;
+  line-height: 1.2em;
+}
+
+body.blog-post article h4 {
+  margin-top: 18px;
+}
+
 body.blog-post article img {
   border: 1px solid #333;
   max-width: 800px;
