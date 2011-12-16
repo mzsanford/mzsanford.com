@@ -6,7 +6,7 @@ I stream my music and store my pictures online. Home stereos moved from single C
 behind the times. There are a few DVD changers on the market but that's only a stop gap solution and it requires that you plan ahead for what you're
 going to watch. I was in search of a way to have every movie I own just a few clicks away. I've found a solution via Apple TV, my Mac
 and [RipIt](http://thelittleappfactory.com/ripit/). I spent time searching online and there wasn't much out there so I hope this post answers at
-least one persons question *before* they buy and Apple TV. This is aimed at people who don't want to play with encoding options and just want things
+least one persons question *before* they buy an Apple TV. This is aimed at people who don't want to play with encoding options and just want things
 to work out of the box.
 
 ### Disclaimers and Bullshit
