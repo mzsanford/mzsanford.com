@@ -25,25 +25,34 @@ installing and configuring Handbrake, which is not a novice activity. You can fe
 #### Step 1: Rip the DVD
 
  * **Step 1**: Put a DVD in the drive
- * **Step 2**: Open RipIt
- * **Step 3**: Click the "Rip it" button (wait 45-60 minutes, depending)
- * **Step 4**: Eject the DVD
+ * **Step 2**: Open RipIt (first image)
+ * **Step 3**: Click the "Rip it" button (second image)
+ * **Step 3.a**: wait 45-60 minutes, depending (third image)
+ * **Step 4**: Eject the DVD (completed in image four)
+ 
+![Open RipIt and insert a DVD](dvds-to-apple-tv/ripit-1.png)
+![Click the "Ript it" button](dvds-to-apple-tv/ripit-2.png)
+![Watch the pretty spinner](dvds-to-apple-tv/ripit-3.png)
+![All's done](dvds-to-apple-tv/ripit-4.png)
 
 Thats all. RipIt will place a `.dvdmedia` file in your `Movies` folder and helpfully open a window to it when it's done. You may notice that there
-is a "Rip & Compress" button in RipIt. I do this in two steps instead for a few reasons. The main reason is for flow (described below) but the 
+is a "Compress" button in RipIt. I do this in two steps instead for a few reasons. The main reason is for flow (described below) but the 
 other reason is that if a compression fails it's much faster to re-try from your computer rather than re-reading from the DVD.
 
 #### Step 2: Compress the Movie
 
 Assuming RipIt is still open you can drag the `.dvdmedia` file on to the RipIt window. By default RipIt will find the longest track on the DVD (usually
-the feature) and compress it. I recommend taking a very short tour of the RipIt preferences before your first DVD. The "Compress" tab at the top
+the feature) and compress it. I recommend taking a very short tour of the RipIt preferences (first image below) before your first DVD. The "Compress" tab at the top
 has a few helpful options. "Import into iTunes" should be checked, and I recommend "Delete after importing into iTunes" to save on disk space. I set
 the "Video target" to "High Quality M4V", which is a format compatible with the most possible gadgets. You can us "Apple TV 2" if you like but I opted
 for something a little less specialized in exchange for slightly bigger files. So, the steps are:
 
  * **Step 1**: Drag the `.dvdmedia` file onto the RipIt window
- * **Step 2**: There is no step two. It already started doing the work.
+ * **Step 2**: There is no step two. It already started doing the work. (it should look like the second image)
  * **Step 3**: Wait a long time for it to finish.
+ 
+![Preferences, preferable](dvds-to-apple-tv/ripit-prefs.png)
+![Compressing a single movie](dvds-to-apple-tv/ripit-5.png)
 
 #### Step 3: Annotating (optional)
 
