@@ -54,11 +54,16 @@ var blogMain = function(req, res) {
   })
 };
 
+var notFound = function(req, res) {
+  res.send("Not the droid you're looking for.", 404);
+};
+
 
 /*
  * GET home page.
  */
 module.exports = {
+  
   index: function(req, res) {
     if (requestHost(req).match(/^blog/)) {
       blogMain(req, res);
@@ -78,12 +83,16 @@ module.exports = {
   
   blogPost: function(req, res) {
     var post = blogPosts.byName[req.params.post];
-
-    res.render('blog/post', {
-      content: post.body,
-      title: post.title,
-      date: post.date,
-      bodyClass: 'long-form blog-post'
-    });
+    
+    if (post === undefined) {
+      notFound(req, res);
+    } else {
+      res.render('blog/post', {
+        content: post.body,
+        title: post.title,
+        date: post.date,
+        bodyClass: 'long-form blog-post'
+      });
+    }
   }
 };
