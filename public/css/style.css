@@ -3,6 +3,9 @@
 * {
   margin: 0;
   padding: 0;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
 }
 
 body {
@@ -10,7 +13,6 @@ body {
   background-image: -moz-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
   background-image: -webkit-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
   color: #555;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -42,13 +44,9 @@ header {
 }
 
 header h1 {
-  font-family: 'Oswald', Helvetica, Arial, sans-serif;
   text-align: center;
-  font-weight: bold;
-  font-size: 80px;
   text-transform: uppercase;
   color: black;
-  letter-spacing: 1px;
   text-decoration: none;
   margin: 20px;
 }
@@ -65,8 +63,6 @@ header h2 {
   border-radius: 3px;
   color: #666;
   display: inline-block;
-  font-size: 14px;
-  font-weight: 300;
   padding: 6px 15px;
 }
 
@@ -76,8 +72,6 @@ footer {
   padding: 0;
   width: 100%;
   bottom: 8px;
-  font-size: 16px;
-  font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
 }
 
 footer .copy {
@@ -121,11 +115,42 @@ nav ol li {
 
 nav ol li a {
   color: #111;
-  font-family: 'Oswald', Helvetica, Arial, sans-serif;
-  font-size: 18px;
   margin: 4px 15px;
-  text-transform: uppercase;
-  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    width: 100%;
+  }
+  
+  header h1 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #contents, nav {
+    width: 100%;
+    margin: 2px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    min-height: 20px;
+    padding-top: 20px;
+  }
+
+  header h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ol li {
+    border-bottom: 1px solid #eee;
+    display: block;
+    width: 100%;
+  }
 }
 
 /* Blog list-specific styles */
@@ -135,19 +160,14 @@ ol.posts li {
 }
 
 ol.posts li h2 {
-  font-family: 'Oswald', Helvetica, Arial, sans-serif;
-  font-size: 22px;
   margin: 10px 0 0px -30px;
   color: #333;
 }
 
 ol.posts li .meta,
 ol.posts li .meta a {
-  font-size: 16px;
-  font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0 20px;
-  font-weight: normal;
 }
 
 ol.posts li .meta a {
@@ -159,16 +179,10 @@ ol.posts li .meta a {
 body.blog-post a.back {
   display: block;
   padding: 5px 5px 15px 5px;
-  font-size: 12px;
-}
-
-body.blog-post article {
-  font-size: 16px;
 }
 
 body.blog-post article code {
   color: #000;
-  font-family: 'Courier', monospace;
 }
 
 body.blog-post article ul {
@@ -189,4 +203,25 @@ body.blog-post article img {
 
 body.blog-post p {
   margin: 15px 0;
+}
+
+@media screen and (max-width: 800px) {
+  ol.posts li h2 {
+    margin: 5px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  ol.posts li {
+    margin: 8px 8px 25px 8px;
+  }
+  
+  ol.posts li .meta {
+    display: block;
+  }
+
+  ol.posts li .meta,
+  ol.posts li .meta a {
+    padding: 0 5px;
+  }
 }

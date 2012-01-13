@@ -1,0 +1,94 @@
+
+/* Site wide typography */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header h1 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+footer {
+  font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Index page */
+
+nav ol li a {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  header h1 {
+    font-size: 70px;
+  }
+
+  nav ol li a  {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 40px;
+  }
+
+  header h2 {
+    display: none;
+  }
+
+  nav ol li a  {
+    font-size: 20px;
+  }
+}
+
+/* Blog */
+
+ol.posts li h2 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+}
+
+ol.posts li .meta,
+ol.posts li .meta a {
+  font-size: 16px;
+  font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+body.blog-post a.back {
+  font-size: 12px;
+}
+
+body.blog-post article {
+  font-size: 16px;
+}
+
+body.blog-post article code {
+  font-family: 'Courier', monospace;
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 500px) {
+  ol.posts li h2 {
+    font-size: 18px;
+  }
+  
+  ol.posts li {
+    font-size: 15px;
+  }
+}
