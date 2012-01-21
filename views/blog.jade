@@ -4,7 +4,7 @@ ol.posts
     li
       h2
         a(href='/blog/'+post.name)!= post.title
-        span.meta!= 'Posted: ' + post.date.getFullYear() + '/' + post.date.getMonth() + '/' + post.date.getDate()
+        span.meta!= 'Posted: ' + post.date.toYMD()
         span.meta Author:&nbsp;
           a(href='http://twitter.com/mzsanford') @mzsanford
       div!= post.snippet
