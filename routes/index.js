@@ -52,6 +52,7 @@ var requestHost = function(req) {
 /* Re-used route definition */
 var blogMain = function(req, res) {
   res.render('blog', {
+    title: false,
     posts: blogPosts.directory,
     bodyClass: 'blog-main'
   })
@@ -71,7 +72,7 @@ module.exports = {
     if (requestHost(req).match(/^blog/)) {
       blogMain(req, res);
     } else {
-      res.render('index', { bodyClass: 'index' });
+      res.render('index', { title: false, bodyClass: 'index' });
     }
   },
   
@@ -79,6 +80,7 @@ module.exports = {
   
   feed: function(req, res) {
     res.render('feed', {
+      title: false,
       posts: blogPosts.directory,
       layout: false
     })
