@@ -3,6 +3,9 @@ var PostPath = __dirname + '/../posts/';
 var fs = require('fs');
 var markdown = require("markdown").markdown;
 
+// Date formatting additions to Date
+require('date-utils');
+
 var blogPosts = {
   byName: {},
   directory: []
