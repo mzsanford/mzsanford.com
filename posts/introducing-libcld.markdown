@@ -2,27 +2,61 @@ Date: 2012-01-12 15:44:00
 Title: Introducing libcld
 Author: Matt Sanford
 
-I'm thrilled to announce `libcld`, a stand-alone C++ library for the [Chromium Compact Language Detector]. As someone who works mostly in higher level languages I'm also thrilled to say that bindings for Java, Ruby, Python and Node are also included. This is based on the awesome work by [TODO: need name] who extracted the CLD code and wrote the Python bindings. I've since focused on an improved build configuration, higher level language bindings and a [Homebrew] formula. Read on for an introduction to installing and using `libcld`.
+I'm thrilled to announce `libcld`, a stand-alone C++ library for the [Chromium Compact Language Detector](http://code.google.com/codesearch#OAMlx_jo-ck/src/third_party/cld/encodings/compact_lang_det/). As someone who works mostly in higher level languages I'm also thrilled to say that bindings for Ruby, Python and Node are also included with Java coming soon. This is based on the awesome work by [Mike McCandless](http://blog.mikemccandless.com/) who [extracted the CLD code]( http://code.google.com/p/chromium-compact-language-detector/) and wrote the Python bindings. I've since focused on an improved build configuration, higher level language bindings and a [Homebrew](http://mxcl.github.com/homebrew/) formula. Read on for an introduction to installing and using `libcld`.
 
 ### Installation
 
+**WARNING:** Before installing any of the ports you **MUST** install the C++ library.
+
+#### Installing the C++ Library (**required**)
+
 On Mac OS X using Homebrew it's as simple as:
 
-    $ brew install libcld
+    $ brew install https://raw.github.com/mzsanford/homebrew/libcld/Library/Formula/libcld.rb
 
-Other Linux or if you are on Mac OS X and are morally opposed to Homebrew you can install from source:
+Other Linux (or if you are on Mac OS X and don't use Homebrew) you can install from source:
 
-    $ git clone http://github.com/mzsanford/cld.git # todo: tar download?
+    $ git clone http://github.com/mzsanford/cld.git
     $ cd cld
     $ ./configure && make
     $ make check # test early. Test often.
     $ make install
 
-I'm not sure about Windows yet as I haven't had the opprotunity to test it.
+On Windows:
 
-### Library Overview
+There is a [Visual Studio Project file](https://github.com/mzsanford/cld/blob/master/cld.vcxproj) created by [@yitzikc](https://github.com/yitzikc). I am personally unable to confirm if it works but if someone can confirm it and send brief instructions I'll include them here.
 
-note: concepts and return values that are shared across languages. 
+#### Installing the Ruby bindings
+
+**Before installing any language binging you MUST first install the C++ library. (see above)**
+
+*Note: This is similar to the default [CLD gem](https://github.com/jtoy/cld), which includes the C++ library. The main difference is that this version uses a shared library and provides a more complete result structure.*
+
+    $ git clone http://github.com/mzsanford/cld.git
+    $ cd cld/ports/ruby
+    $ rake gem
+    $ gem install pkg/*gem
+    
+#### Installing the Node bindings
+
+**Before installing any language binging you MUST first install the C++ library. (see above)**
+
+*Note: This is similar to the [@dachev/cld](https://github.com/dachev/cld) project with the exception of using a shared library and providing an asynchronous interface.*
+
+    $ git clone http://github.com/mzsanford/cld.git
+    $ cd cld/ports/node
+    $ node-waf configure build
+    $ npm install
+
+#### Installing the Python bindings
+
+**Before installing any language binging you MUST first install the C++ library. (see above)**
+
+*Note: Python bindings were included in the original project and have only been refactored to fit into the new build system*
+
+    $ git clone http://github.com/mzsanford/cld.git
+    $ cd cld/ports/python
+    $ make install # This will prompt for your password
 
 ### API Examples
 
@@ -50,10 +84,6 @@ There are full [RDocs hosted by github](http://mzsanford.github.com/cld/ports/ru
      @reliable=0>
 
 You can also run benchmarks from the `ports/ruby` directory with `rake benchmark`. I'll do a future post on the benchmarks.
-
-#### Java
-
-TODO: Finish and add an example.
 
 #### Node
 
@@ -89,16 +119,38 @@ Complete results via the async method run at 51,000 per second. That's pretty da
 
 #### Python
 
-TODO: Example.
+The Python API works like so:
+
+    import cld
+    
+    detectedLangName, detectedLangCode, isReliable, textBytesFound, details = cld.detect("This is my sample text", pickSummaryLanguage=True, removeWeakMatches=False)
+    print '  detected: %s' % detectedLangName
+    print '  reliable: %s' % (isReliable != 0)
+    print '  textBytes: %s' % textBytesFound
+    print '  details: %s' % str(details)
+    
+    # The output look lie so:
+    #  detected: ENGLISH
+    #  reliable: True
+    #  textBytes: 25
+    #  details: [('ENGLISH', 'en', 64, 20.25931928687196), ('FRENCH', 'fr', 36, 8.221993833504625)]      
+
+I do not yet have any benchmarks for the Python bindings but I expect them to be in-line with all of the other simple, synchronous bindings.
 
 ### Next Steps
 
-Note: More work on API and docs.
+The Java/JNI interface is working and I am currently working on improving the build system to make it more usable. Any help would be welcome but with luck it will be done soon.
 
 I need help with:
 
-* Improved autotools configuration by someone who knows it better
+* More autotools configuration improvements by someone who knows it better
 * Python bindings need some love
 * MOAR BINDINGS
  * I know Perl so I may go that route
- * I would love to see community help on PHP. CLR/.NET? Scala facade to java API? Other languages? Go wild and make a browser plugin version of the JS API? That would be insane!
+ * I would love to see community help on PHP.
+ * Other possibilities (in no particular order):
+   * CLR/.NET
+   * Scala facade to java API
+   * Objective-C
+   * Other languages?
+   * Go wild and make a browser plugin version of the JS API? That would be insane!

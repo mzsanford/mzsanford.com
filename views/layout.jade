@@ -1,7 +1,11 @@
 !!! 5
 html(lang="en")
   head
-    title="Matt Sanford"
+    - if (title)
+      title!= title
+    - else
+      title="Matt Sanford"
+    meta(name='viewport', content='initial-scale=1.0')
     link(href='http://fonts.googleapis.com/css?family=Oswald|Yanone+Kaffeesatz:200', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='/css/type.css')
