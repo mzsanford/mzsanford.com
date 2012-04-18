@@ -128,11 +128,21 @@ nav ol li a {
     margin: 0;
   }
   
-  #contents, nav {
+  #contents {
     width: 100%;
-    margin: 2px;
-    margin-bottom: 5px;
+    padding: 0;
+    margin: 0;
   }
+  
+  nav {
+    width: 80%;
+    padding: 8px 10%;
+  }
+  
+  nav ol li {
+    margin: 8px 0;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -181,6 +191,19 @@ body.blog-post a.back {
   padding: 5px 5px 15px 5px;
 }
 
+/* Used outside of code blocks. Tricky. */
+body.blog-post article pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: auto;
+  padding: 6px;
+  border: 1px solid #CCC;
+  background: #EFEFEF;
+  color: #000;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
 body.blog-post article code {
   color: #000;
 }
@@ -206,9 +229,18 @@ body.blog-post p {
 }
 
 @media screen and (max-width: 800px) {
+  ol.posts li div {
+    padding: 8px 10px;
+  }
+
   ol.posts li h2 {
     margin: 5px 0px 0px 0px;
   }
+  
+  body.blog-post article {
+    padding: 6px;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -223,5 +255,9 @@ body.blog-post p {
   ol.posts li .meta,
   ol.posts li .meta a {
     padding: 0 5px;
+  }
+  
+  body.blog-post article pre code {
+    font-size: 12px;
   }
 }
