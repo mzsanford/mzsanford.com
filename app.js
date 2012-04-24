@@ -30,6 +30,7 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
+app.get('/resume', routes.resume);
 app.get('/blog', routes.blogMain);
 app.get('/blog/:post', routes.blogPost);
 app.get('/feed.atom', routes.feed);

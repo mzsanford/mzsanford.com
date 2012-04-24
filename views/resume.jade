@@ -1,0 +1,72 @@
+!!! 5
+html(lang="en")
+  head
+    title="Matt Sanford"
+    meta(name='viewport', content='initial-scale=1.0')
+    link(href='http://fonts.googleapis.com/css?family=Oswald|Yanone+Kaffeesatz:200', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/type.css')
+    link(rel='stylesheet', href='/css/resume.css')
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-7956475-1']);
+      _gaq.push(['_setDomainName', 'mzsanford.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  body
+    header
+      h1 Matt Sanford
+      h2 Engineer at large
+    div#chronology
+      ol
+        li.employer
+          span.name Twitter
+          span.description You know, I did stuff
+          ol.positions
+            li
+              span.name Technical Manager
+            li
+              span.name Engineer
+              ol.projects
+                li
+                  span.name Translation Center
+                  span.url http://translate.twttr.com
+                  span.description Lorem ipsum
+                  ul.people
+                    li.coworker
+                     a(href='http://twitter.com/nsallembien') @nsallembien
+                    li.maintainer
+                     a(href='http://twitter.com') @omnidactyl
+        li.employer
+          span.name Summize
+          span.description You know, I did stuff
+          ol.positions
+            li
+              span.name N/A
+        li.employer
+          span.name Walt Disney Internet Group
+          span.description You know, I did stuff
+          ol.positions
+            li
+              span.name Software Engineer (?)
+        li.employer
+          span.name AOL
+          span.description You know, I did stuff
+          ol.positions
+            li
+              span.name Software Engineer
+            li
+              span.name Senior Operations Analyst
+            li
+              span.name Operations Analyst
+            li
+              span.name Technical Support Representative
+    footer
+      span.copy &copy; #{1900+(new Date().getYear())} Matt Sanford
+      span.contact Contact:
+        a(href='http://twitter.com/mzsanford') @mzsanford

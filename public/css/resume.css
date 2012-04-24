@@ -1,0 +1,30 @@
+
+body {
+  
+}
+#chronology {
+  padding: 10px;
+  margin: 5px;
+}
+
+#chronology ol,
+#chronology ul {
+  list-style-type: none;
+  margin: 15px;
+  border: 2px solid #ccc;
+  
+}
+
+.employer {
+  width: 70%;
+}
+
+.employer .name {
+  font-weight: bold;
+}
+
+.employer .description {
+  font-style: italic;
+  padding: 0 4px;
+  font-size: 11px;
+}
