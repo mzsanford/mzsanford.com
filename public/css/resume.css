@@ -1,30 +1,193 @@
 
-body {
-  
+@font-face{ 
+	font-family: 'WebSymbolsRegular';
+	src: url('/fonts/websymbols-regular-webfont.eot');
+	src: url('/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('/fonts/websymbols-regular-webfont.woff') format('woff'),
+	     url('/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+	     url('/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+	}
+
+body.resume a {
+  padding: 0;
 }
+
+div#howto {
+  padding: 40px 40px 0 40px;
+  font-weight: 300;
+}
+
+.sec-title {
+  font-weight: bold;
+  text-align: right;
+  color: #ccc;
+  padding: 2px;
+  margin-bottom: -50px;
+  font-size: 150px;
+  line-height: 150px;
+  height: 140px;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
 #chronology {
-  padding: 10px;
-  margin: 5px;
+  background:-moz-linear-gradient(left, #ccc 0%,#ccc 100%); 
+  background:-webkit-linear-gradient(left, #ccc 0%,#ccc 100%); 
+  background:linear-gradient(left, #ccc 0%,#ccc 100%);
+  background-position: 50%;
+  background-repeat: repeat-y;
+  background-size: 8px auto;
 }
 
 #chronology ol,
 #chronology ul {
   list-style-type: none;
-  margin: 15px;
-  border: 2px solid #ccc;
-  
 }
+
+ol.employers {
+  margin: 15px 0;
+}
+
+/** Employer sections **/
 
 .employer {
-  width: 70%;
+  display: block;
+  border-top: 1px solid #ccc;
+  margin: 55px 0;
 }
 
-.employer .name {
+.employer-name {
+  font-weight: bold;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.employer-description {
+  vertical-align: top;
+  display: inline-block;
+  margin: 8px;
+  padding: 4px;
+
+  border: 3px solid #ccc;
+  -webkit-border-radius: 8px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: 8px;
+  -moz-border-radius-bottomleft: 0;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+
+  font-style: italic;
+  font-size: 11px;
+}
+
+/** Positions section (per employer) **/
+
+ol.positions {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+}
+
+ol.positions li.pos {
+  clear: both;
+  width: 40%;
+  padding: 6px;
+  
+  border: 8px solid #ccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+ol.positions li.pos:nth-child(odd) {
+  margin-left: 6%;
+}
+
+ol.positions li.pos .description {
+  font-weight: 200;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.icon {
+  padding: 4px;
+  font-family: 'WebSymbolsRegular';
+}
+
+.r-arrow, .l-arrow {
+  font-size: 20px;
+  overflow: hidden;
+  color: #ccc;
+  font-family: 'WebSymbolsRegular';
+}
+
+.r-arrow {
+  float: right;
+  margin-right: -20px;
+}
+
+.l-arrow {
+  float: left;
+  margin-left: -20px;
+}
+
+
+ol.positions li.pos:nth-child(even) {
+  margin-left: 52%;
+}
+
+/** Position details **/
+
+ul.people {
+  margin: 4px 0;  
+  font-size: 14px;
+}
+
+ul.people li {
+  display: inline-block;
+  padding-left: 4px;
+}
+
+ul.people .title {
   font-weight: bold;
 }
 
-.employer .description {
-  font-style: italic;
+/*** Projects ***/
+
+ol.projects li.project {
+  border-top: 2px solid #ddd;
+  margin: 0 0 8px 8px;
+  padding-top: 8px;
+}
+
+ol.projects li.project a.url:before {
+  content: ' • ';
+}
+
+ol.projects li.project a.expand {
+  float: right;
+  color: #666;
+}
+
+ol.projects li.project:first-child {
+  border-top: none;
+}
+
+ol.projects li.project a {
+  font-size: 12px;
+  margin-left: 4px;
+  font-weight: normal;
+}
+
+ol.projects li.project .description {
+  display:none;
+  font-size: 13px;
   padding: 0 4px;
-  font-size: 11px;
+}
+
+ol.projects li.project .description a {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
 }

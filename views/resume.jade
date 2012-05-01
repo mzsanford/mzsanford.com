@@ -7,6 +7,8 @@ html(lang="en")
     link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='/css/type.css')
     link(rel='stylesheet', href='/css/resume.css')
+    script(type="text/javascript", src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type="text/javascript", src='http://platform.twitter.com/anywhere.js?id=fJsg3RnOk16oG5Y6QRfjw&v=1')
     script(type="text/javascript")
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-7956475-1']);
@@ -18,55 +20,309 @@ html(lang="en")
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-  body
+  body.resume
     header
       h1 Matt Sanford
       h2 Engineer at large
+    div#howto
+      | I get sick of seeing resumes that tell <strong>only half of the story</strong>. I've taken the totally open approach to me resume.
+      | I've included not just the companies I've worked for, or just the positions I held there, I've provided details
+      | about the projects I worked on. Better yet, I've <strong>included the contact for people who took over those projects</strong>
+      | after me. I am guessing about half of those people will have negative comments but you know what, that's what happens
+      | when a problem outgrows the code you wrote for it. I have not included the day-to-day bug fixes and roadmap items I worked
+      | on since that seems unhelpful.
     div#chronology
-      ol
-        li.employer
-          span.name Twitter
-          span.description You know, I did stuff
+      ol.employers
+        li.employer#emp-twitter
+          span.employer-name Twitter
+          span.employer-description Search, API and Mr. International.
           ol.positions
-            li
-              span.name Technical Manager
-            li
-              span.name Engineer
-              ol.projects
+            li.pos
+              div.r-arrow >
+              h4.name <span class="icon">U</span>Technical Manager
+              div.description
+                | Manager of a 12 person team in charge of Twitter's Translation Center,
+                | Help Center and Support Tools. Based on the quick growth and varied nature
+                | of the team I divided them into sub-groups with specific ownership. The leadership
+                | and ownership improved quality and response in emergencies, while making the
+                | work more fulfilling.
+              ul.people
+                li.title Some direct reports:
                 li
-                  span.name Translation Center
-                  span.url http://translate.twttr.com
-                  span.description Lorem ipsum
-                  ul.people
-                    li.coworker
-                     a(href='http://twitter.com/nsallembien') @nsallembien
-                    li.maintainer
-                     a(href='http://twitter.com') @omnidactyl
-        li.employer
-          span.name Summize
-          span.description You know, I did stuff
+                  a(href='http://twitter.com/nsallembien') @nsallembien
+                li
+                  a(href='http://twitter.com/bshine') @bshine
+              ul.people
+                li.title My managers in this position:
+                li
+                  a(href='http://twitter.com/crystal') @crystal
+                li
+                  a(href='http://twitter.com/sfjulie') @sfjulie
+            li.pos
+              div.l-arrow <
+              h4.name <span class="icon">_</span>Engineer (International)
+              div.description
+                | Lead engineer for international projects. This was a combination of company roadmap projects
+                | and international-focused side projects that I conceived and executed on.
+              ol.projects
+                li.project
+                  h5.name Translation Center
+                    a.url(href='http://translate.twttr.com') http://translate.twttr.com
+                    a.expand.icon(href='#') ; 
+                  div.description
+                    | Designed and implemented a system for Twitter's community translation effort. Originally
+                    | built into twitter.com based on a prototype from <a href="http://twitter.com/mrtall">@mrtall</a>
+                    | and later moved to a standalone Rails application. 
+                    ul.people
+                      li.title Co-workers on the project:
+                      li
+                       a(href='http://twitter.com/cpatil') @cpatil
+                      li
+                       a(href='http://twitter.com/nsallembien') @nsallembien
+                    ul.people
+                      li.title Owners after me:
+                      li
+                       a(href='http://twitter.com/nsallembien') @nsallembien
+                      li
+                       a(href='http://twitter.com') @omnidactyl
+                 li.project
+                   h5.name Twitter World Cup 2010
+                     a.url(href='http://blog.twitter.com/2010/06/develop-game-build-better-future.html') http://blog.twitter.com/…
+                     a.expand.icon(href='#') ; 
+                   div.description
+                     | Designed and implemented the <a href="http://news.softpedia.com/news/World-Cup-Twitter-Launches-Dedicated-Site-and-Hashflags-144383.shtml">#hashflags</a>
+                     | feature to encourage conversation. Worked with a designer to create the World Cup 2012 microsite to display
+                     | side-by-side Tweets about the event. All of this as a <strong>side project</strong> based on my belief that
+                     | the World Cup was an important event.
+                     ul.people
+                       li.title Co-workers on the project:
+                       li
+                        a(href='http://twitter.com/cpatil') @cpatil
+                       li
+                        a(href='http://twitter.com/vitor') @vitor
+                li.project
+                   h5.name twitter-text libraries
+                     a.expand.icon(href='#') ; 
+                   div.description
+                     | I saw a need for consistent auto-linking in Tweets, especially after fixing issues with Japanese
+                     | text. Rather than a simple bug fix I made this into an open source project to create a cross-platform
+                     | test suite (<a href="https://github.com/twitter/twitter-text-conformance">twitter-text-conformance</a>).
+                     | I wrote the <a href="https://github.com/twitter/twitter-text-rb">Ruby</a> and
+                     | <a href="https://github.com/twitter/twitter-text-java">Java</a> implementations and consulted with the
+                     | the Twitter front end team on the <a href="https://github.com/twitter/twitter-text-js">Javascript</a> implementation.
+                     | I continued development as the leader of an internal group that determined the features and roadmap.
+                     ul.people
+                       li.title Co-workers on the projects: 
+                       li
+                         a(href='http://twitter.com/ded') @ded
+                       li
+                        a(href='http://twitter.com/kevinweil') @kevinweil
+                     ul.people
+                       li.title Maintainer after I left: 
+                       li
+                         a(href='http://twitter.com/keita_f') @keita_f
+            li.pos
+              div.r-arrow >
+              h4.name <span class="icon">_</span>Engineer (API)
+              div.description
+                | Lead engineer for international projects. This was a combination of company roadmap projects
+                | and international-focused side projects that I conceived and executed on.
+               ol.projects
+                  li.project
+                    h5.name Mail at Twitter
+                       a.expand.icon(href='#') ; 
+                     div.description
+                       | Email at Twitter was all plain-text and sent by the Rails process at the time of whatever event
+                       | spawned it. The mails looked like spam so I took on a side project to upgrade the mail system. Moved
+                       | to multipart MIME and HTML emails (with Google Analytics click tracking) and decoupled the email 
+                       | from the front-end processing. This code continued to run in production for several years before its
+                       | eventual replacement.
+                       ul.people
+                          li.title Operations/Engineers I worked with: 
+                          li
+                            a(href='http://twitter.com/netik') @netik
+                          li
+                           a(href='http://twitter.com/rael') @rael
+                        ul.people
+                          li.title People who cleaned up my mess: 
+                          li
+                            a(href='http://twitter.com/kmonkeyjam') @kmonkeyjam
+                          li
+                            a(href='http://twitter.com/phopkins') @phopkins
+                  li.project
+                    h5.name OAuth v1.0
+                      a.url(href='http://groups.google.com/group/twitter-development-talk/msg/55be24ee9219c447') [Announcement]
+                      a.expand.icon(href='#') ; 
+                    div.description
+                      | I created the first server-side implementation of OAuth for Twitter.com. This required complex
+                      | integrations with Twitter's existing authentication infrastructure as well as performance critical
+                      | design decisions to make sure that the API traffic could continue unabated.
+                      ul.people
+                        li.title Tech lead of the API team:
+                        li
+                          a(href='http://twitter.com/al3x') @al3x
+                      ul.people
+                        li.title Re-write later on by:
+                        li
+                          a(href='http://twitter.com/raffi') @raffi
+                        li
+                          a(href='http://twitter.com/DanaDanger') @DanaDanger
+                      
+        li.employer#emp-summize
+          span.employer-name Summize
+          span.employer-description In a company this small you do it all.
           ol.positions
-            li
-              span.name N/A
-        li.employer
-          span.name Walt Disney Internet Group
-          span.description You know, I did stuff
+            li.pos
+              div.r-arrow >
+              h4.name <span class="icon">_</span>Engineer (Twitter Search)
+              div.description
+                | Worked on a combination of content acquisition, content processing, front-end development and
+                | operations for twitter.summize.com, which later became search.twitter.com.
+               ol.projects
+                  li.project
+                    h5.name Language Detection
+                      a.expand.icon(href='#') ;
+                    div.description
+                      | To help remove irrelevant results from Twitter search results I felt limiting to Tweets the user
+                      | can read was an obvious first step. The problem here was that language detection needed to be
+                      | implemented in a way that was both fast an reasonably accurate. I posted a brief
+                      | <a href="http://mzsanford.com/blog/language-detection-geekery">blog post</a> about the approach. This
+                      | code continued to be used for Twitter search until my departure in late 2011.
+                      ul.people
+                        li.title Co-worker on the project:
+                        li
+                          a(href='http://twitter.com/JugglingPumba') @JugglingPumba
+                      ul.people
+                        li.title Owners after my departure:
+                        li
+                          a(href='http://twitter.com/rion') @rion
+                        li
+                          a(href='http://twitter.com/mbilotti') @mbilotti
+                  li.project
+                    h5.name More Tweets since you began searching …
+                      a.expand.icon(href='#') ;
+                    div.description
+                      | It seems like a small thing, and an obvious one, now that years have passed. I created the
+                      | "x more Tweets since you began searching" dialog for Twitter search. The product goal was to increase
+                      | the <em>feeling</em> of real-time. At the time this needed to be stressed and again, it seems simple,
+                      | but it's simply awesome at doing what it is designed to do. <strong>Notably</strong>: I did not deliver new Tweets inline
+                      | (although I wrote it) because the moving click-target problems it creates.
+                      ul.people
+                        li.title Co-worker on the project:
+                        li
+                          a(href='http://twitter.com/gregpass') @gregpass
+                  li.project
+                    h5.name Tweet acquisition
+                      a.expand.icon(href='#') ;
+                    div.description
+                      | As a very earlier user of the Twitter firehose we first needed to implement it over XMPP. Because
+                      | of the instabilities we also needed a backup method using the Public Timeline method. My Java acquisition
+                      | pipeline used the firehose unless excess lag was detected, at which point it failed over to the
+                      | Public Timeline. Not a difficult project but critical to the success of our small company.
+                      ul.people
+                        li.title Co-workers on the pipeline:
+                        li
+                          a(href='http://twitter.com/JugglingPumba') @JugglingPumba
+                        li
+                          a(href='http://twitter.com/ej') @ej
+            li.pos
+              div.l-arrow <
+              h4.name <span class="icon">_</span>Engineer (Review Search)
+              div.description
+                | Worked mostly on content acquisition for the review search and aggregation site Summize.com. The content
+                | was crawled from review sources all over the web.
+               ol.projects
+                 li.project
+                   h5.name Grease Monkey Demos
+                     a.expand.icon(href='#') ;
+                   div.description
+                     | Before pivoting to work on Twitter search Summize was showing how sentiment extraction could improve
+                     | content recommendations. I wrote Grease Monkey demos to show this to prospective clients interactively.
+                     | These included <a href="https://vimeo.com/31966319">Washington Post</a> and <a href="https://vimeo.com/31966238">O'Reilly</a>.
+                  li.project
+                    h5.name Monitoring and Metrics
+                      a.expand.icon(href='#') ;
+                    div.description
+                      | While the project itself involved simple things like choosing a systems monitoring solution (Cacti at
+                      | at the time) it also involved instrumenting the code for monitorability. This included the now open
+                      | sourced <a href="http://commons.apache.org/sandbox/pipeline/apidocs/org/apache/commons/pipeline/stage/ExtendedBaseStage.html">ExtendedBaseStage for commons-pipeline</a>
+                      ul.people
+                        li.title Co-workers on the pipeline:
+                        li
+                          a(href='http://twitter.com/JugglingPumba') @JugglingPumba
+                  li.project
+                    h5.name Heritrix Configuration / Extension
+                      a.expand.icon(href='#') ;
+                    div.description
+                      | Configuring Heritrix for site-specific crawls is a daunting task that does not yield much sexy to talk
+                      | about. However, at Summize we also wanted to re-visit a large number of blog posts and that sort of
+                      | long-running non-batch crawl required extensive extensions to Heritrix. This involved a modified exponential
+                      | back-off scheduling algorithm and a content change detection system.
+        li.employer#emp-wdig
+          span.employer-name Walt Disney <br/>&nbsp;Internet Group
+          span.employer-description Engineer on login, registration and commerce.
           ol.positions
-            li
-              span.name Software Engineer (?)
-        li.employer
-          span.name AOL
-          span.description You know, I did stuff
+            li.pos
+              div.r-arrow >
+              h4.name <span class="icon">_</span>Software Engineer (?)
+              div.description
+                | I worked on the server-side Java processing of registration, login and commerce on the Disney
+                | owned online properties (ABC, ESPN, etc.). Among the projects during my tenure was merge of the
+                | European and US account systems, for which I was able to lend a hand on both design and implementation.
+              ol.projects
+                li.project
+                  h5.name European Migration
+                    a.expand.icon(href='#') ;
+                  div.description
+                    | I worked with the team to design and implement a solution for merging the two account systems. While most
+                    | of this work was pretty standard it did include my first exposure to character encodings, which has
+                    | since lead me to become a member of the <a href="http://unicode.org">Unicode Consortium</a>.
+                    ul.people
+                      li.title Co-workers and maintainers
+                      li
+                        a(href='http://www.linkedin.com/pub/aleece-vanderloop/0/648/297') Aleece Vanderloop
+                      li
+                        a(href='http://www.linkedin.com/profile/view?id=49152599') Jaya Srinivasan
+        li.employer#emp-aol
+          span.employer-name AOL
+          span.employer-description From the phones to the research department.
           ol.positions
-            li
-              span.name Software Engineer
-            li
-              span.name Senior Operations Analyst
-            li
-              span.name Operations Analyst
-            li
-              span.name Technical Support Representative
+            li.pos
+              div.r-arrow >
+              h4.name <span class="icon">_</span>Software Engineer (Search Research)
+              div.description
+                | foo
+            li.pos
+              div.l-arrow <
+              h4.name <span class="icon">_</span>Software Engineer (Video Search)
+              div.description
+                | foo
+            li.pos
+              div.r-arrow >
+              h4.name <span class="icon">S</span>Senior Operations Analyst
+              div.description
+                | foo
+            li.pos
+              div.l-arrow <
+              h4.name <span class="icon">S</span>Operations Analyst
+              div.description
+                | foo
+            li.pos
+              div.r-arrow >
+              h4.name <span class="icon">U</span>Technical Support Representative
+              div.description
+                | I worked
     footer
       span.copy &copy; #{1900+(new Date().getYear())} Matt Sanford
       span.contact Contact:
         a(href='http://twitter.com/mzsanford') @mzsanford
+    script(type="text/javascript")
+      twttr.anywhere(function (T) {
+        T.hovercards();
+      });
+    script(type="text/javascript")
+        $('.expand').click(function() {
+          $(this).parent().parent().find('.description').toggle();
+          return(false);
+        });
+      
