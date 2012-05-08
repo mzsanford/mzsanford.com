@@ -191,6 +191,18 @@ body.blog-post a.back {
   padding: 5px 5px 15px 5px;
 }
 
+body.blog-post article a {
+  font-weight: bold;
+  padding: 0;
+  color: #39f;
+}
+
+body.blog-post article a:hover {
+  color: #00B7FF;
+  -webkit-transition:color 0.15s ease-in;
+  -moz-transition:color 0.15s ease-in;
+}
+
 /* Used outside of code blocks. Tricky. */
 body.blog-post article pre {
   overflow-x: auto;
