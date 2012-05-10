@@ -25,17 +25,19 @@ html(lang="en")
       h1 Matt Sanford
       h2 Engineer at large
     div#howto
-      | I get sick of seeing resumes that tell <strong>only half of the story</strong>. I've taken the totally open approach to me resume.
-      | I've included not just the companies I've worked for, or just the positions I held there, I've provided details
+      | I've taken the totally open approach to my resume.
+      | I've included not just the companies I've worked for, or just the positions I held there, but I've provided details
       | about the projects I worked on. Better yet, I've <strong>included the contact for people who took over those projects</strong>
-      | after me. I am guessing about half of those people will have negative comments but you know what, that's what happens
+      | after me, where available. I am guessing about half of those people will have negative comments but that's what happens
       | when a problem outgrows the code you wrote for it. I have not included the day-to-day bug fixes and roadmap items I worked
-      | on since that seems unhelpful.
+      | on since that seems unhelpful. I believe that if you're reading this you should understand that an acceptable solution today
+      | might not appropriate a year from now. I solve problems with an eye toward the future but without a crystal ball.
     div#chronology
       ol.employers
         li.employer#emp-twitter
           span.employer-name Twitter
           span.employer-description Search, API and Mr. International.
+            span.employer-dates 2008-2011
           ol.positions
             li.pos
               div.r-arrow >
@@ -171,6 +173,7 @@ html(lang="en")
         li.employer#emp-summize
           span.employer-name Summize
           span.employer-description In a company this small you do it all.
+            span.employer-dates 2007-2008
           ol.positions
             li.pos
               div.r-arrow >
@@ -261,6 +264,7 @@ html(lang="en")
         li.employer#emp-wdig
           span.employer-name Walt Disney <br/>&nbsp;Internet Group
           span.employer-description Engineer on login, registration and commerce.
+            span.employer-dates 2006-2007
           ol.positions
             li.pos
               div.r-arrow >
@@ -286,32 +290,99 @@ html(lang="en")
         li.employer#emp-aol
           span.employer-name AOL
           span.employer-description From the phones to the research department.
+            span.employer-dates 1998-2006
           ol.positions
             li.pos
               div.r-arrow >
               h4.name <span class="icon">_</span>Software Engineer (Search Research)
               div.description
-                | foo
+                | Junior member of the Search Research department. Worked on site creation for the group and a series of
+                | prototype projects to show off the work we had been doing.
+              ol.projects
+                li.project
+                  h5.name research.aol.com
+                    a.expand.icon(href='#') ;
+                  div.description
+                    | Created a site to showcase the insights the team was gathering from search log data. This was mostly adding
+                    | fancy jQuery effects (new at the time) and determining what method would best display the data. This was
+                    | eventually shut down after the search logs in question were found to be less anonymous that thought.
+                    ul.people
+                      li.title Manager:
+                      li
+                        a(href='http://twitter.com/abdur') @abdur
+                li.project
+                  h5.name Prototype: Podcast Search
+                    a.expand.icon(href='#') ;
+                  div.description
+                    | I created a small revisiting crawler for the most popular podcasts (then a hot topic). I worked with a 
+                    | few other team members on meta-data extraction and search indexing and then wrote a front-end for
+                    | our new service.
+                    ul.people
+                      li.title Manager:
+                      li
+                        a(href='http://twitter.com/abdur') @abdur
+                li.project
+                  h5.name Patent filings
+                    a.expand.icon(href='#') ;
+                  div.description
+                    | Not the proudest projects but one that required significant work was the filing of two patents. One is related
+                    | to image processing and required intensive manual quality evaluation. The other was related to crawler technology
+                    | and while the filing was easier the work done implementing it was wide ranging and difficult.
+                    ul.people
+                      li.title Manager:
+                      li
+                        a(href='http://twitter.com/abdur') @abdur
             li.pos
               div.l-arrow <
               h4.name <span class="icon">_</span>Software Engineer (Video Search)
               div.description
-                | foo
+                | Engineer in charge of the crawler components of the AOL Video Search system. I also worked on other
+                | components like thumbnail extraction and processing.
+              ol.projects
+                li.project
+                  h5.name Web Crawler
+                    a.expand.icon(href='#') ;
+                  div.description
+                    | I took over and existing RMI-based crawler infrastructure and made significant scalability improvements
+                    | by moving to internally-queued communication to reduce lock contention. I also parallelized fetches to use
+                    | more machine resources while a given process was waiting on network I/O.
+                    ul.people
+                      li.title Manager:
+                      li
+                        a(href='http://twitter.com/jkolar') @jkolar
             li.pos
               div.r-arrow >
               h4.name <span class="icon">S</span>Senior Operations Analyst
               div.description
-                | foo
+                | Helped ensure a smooth transition from per-country currencies to the Euro by working closely with our
+                | team in Dublin, Ireland and our partners there. I lived in Ireland for 18 months as part of the project,
+                | which in the end was very successful. Upon my return I started working on Video Search and AOL Voicemail
+                | operations, which involved bringing newly acquired technologies in house.
+                ul.people
+                  li.title Co-workers left with my code:
+                  li
+                    a(href='http://www.linkedin.com/profile/view?id=8818289') Gary Cosgrave
             li.pos
               div.l-arrow <
               h4.name <span class="icon">S</span>Operations Analyst
               div.description
-                | foo
+                | Worked with the QA and Engineering teams to improve the quality of software for billing, reporting and data 
+                | warehousing. Monitored systems and wrote new software to collect metrics and monitor for anomalies (variance from
+                | expected values, mostly). Learned to program on the job.
+                ul.people
+                  li.title Co-worker:
+                  li
+                    a(href='http://www.linkedin.com/profile/view?id=7391772') Dave Whittle
+                  li.title Co-workers left with my code:
+                  li
+                    a(href='http://www.linkedin.com/profile/view?id=19181215') Bill McGarvey
+                  li
+                    a(href='http://www.linkedin.com/profile/view?id=4418419') Ron Lovato 
             li.pos
               div.r-arrow >
               h4.name <span class="icon">U</span>Technical Support Representative
               div.description
-                | I worked
+                | "Hello, and thank you for calling America Online, My name is Matt, can I start by getting your Screen Name?"
     footer
       span.copy &copy; #{1900+(new Date().getYear())} Matt Sanford
       span.contact Contact:

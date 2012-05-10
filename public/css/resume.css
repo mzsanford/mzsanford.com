@@ -80,6 +80,14 @@ ol.employers {
   font-size: 11px;
 }
 
+.employer-dates {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+  color: #666;
+}
+
 /** Positions section (per employer) **/
 
 ol.positions {
