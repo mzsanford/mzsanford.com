@@ -110,5 +110,9 @@ module.exports = {
         bodyClass: 'long-form blog-post'
       });
     }
+  },
+  
+  resume: function(req, res) {
+    res.render('resume', { layout: false });
   }
 };
