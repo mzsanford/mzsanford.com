@@ -3,9 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  -moz-transition: all .25s linear;
-  -webkit-transition: all .25s linear;
-  transition: all .25s linear;
+
+}
+
+html {
+  min-height: 100%;
 }
 
 body {
@@ -13,6 +15,9 @@ body {
   background-image: -moz-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
   background-image: -webkit-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
   color: #555;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
 }
 
 a {
@@ -191,6 +196,18 @@ body.blog-post a.back {
   padding: 5px 5px 15px 5px;
 }
 
+body.blog-post article a {
+  font-weight: bold;
+  padding: 0;
+  color: #39f;
+}
+
+body.blog-post article a:hover {
+  color: #00B7FF;
+  -webkit-transition:color 0.15s ease-in;
+  -moz-transition:color 0.15s ease-in;
+}
+
 /* Used outside of code blocks. Tricky. */
 body.blog-post article pre {
   overflow-x: auto;
@@ -224,8 +241,20 @@ body.blog-post article img {
   -webkit-box-shadow: 10px 10px 5px #888;
 }
 
+body.blog-post article .sfy-story {
+  border-top: 2px solid #333;
+}
+
+body.blog-post article .comments {
+  margin-top: 80px;
+}
+
 body.blog-post p {
   margin: 15px 0;
+}
+
+.strike {
+  text-decoration: line-through;
 }
 
 @media screen and (max-width: 800px) {

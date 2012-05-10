@@ -8,7 +8,11 @@ require('date-utils');
 
 var blogPosts = {
   byName: {},
-  directory: []
+  directory: [],
+  getPosts: function() {
+    var now = new Date();
+    return this.directory.filter(function(x){ if (x.date < now) { return x; } });
+  }
 };
 
 fs.readdir(PostPath, function(err, files) {
@@ -31,12 +35,19 @@ fs.readdir(PostPath, function(err, files) {
       });
       obj.name = parts[0];
       obj.snippet = markdown.toHTML(data[0]);
-      obj.body = markdown.toHTML(data.join("\n\n"));      
+      obj.body = markdown.toHTML(data.join("\n\n"));
+      
+      if (obj.storify) {
+        obj.body += "<h2 class=\"comments\">Comments on this post</h2>"
+                 +  "<script src=\"" + obj.storify + ".js?header=false\"></script><noscript>[<a href=\"" +
+                                       obj.storify + "\" target=\"_blank\">View the story \"Comments on Agile Patent Reform\" on Storify</a>]</noscript>";
+      }  
 
       blogPosts.byName[obj.name] = obj;
       blogPosts.directory.push(obj);
     }
   });
+
   // Date ordered directory
   blogPosts.directory.sort(function(a,b) {
     if (a.date > b.date) return -1;
@@ -53,7 +64,7 @@ var requestHost = function(req) {
 var blogMain = function(req, res) {
   res.render('blog', {
     title: false,
-    posts: blogPosts.directory,
+    posts: blogPosts.getPosts(),
     bodyClass: 'blog-main'
   })
 };
@@ -81,7 +92,7 @@ module.exports = {
   feed: function(req, res) {
     res.render('feed', {
       title: false,
-      posts: blogPosts.directory,
+      posts: blogPosts.getPosts(),
       layout: false
     })
   },
