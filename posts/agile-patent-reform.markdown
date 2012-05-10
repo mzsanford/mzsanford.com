@@ -1,4 +1,5 @@
 Title: Agile Software Patent Reform
+Storify: http://storify.com/mzsanford/comments-on-agile-patent-reform
 Author: Matt Sanford
 Date: 2012-05-08 11:00:00
 
@@ -27,3 +28,4 @@ The other incremental change to make patents more meaningful is to **raise the b
 ## End Rant
 
 Providing a small, actionable change that limits the largest type of abuse seems obvious. I'm not sure why so many blog posts call for a complete dismantling of the patent system. I'm guessing it generates more readers. Screw that, I don't want readers – I want a reasonable discourse about change we can affect rather than hyperbole about a "solution" that is too radical for the people in charge of such things to even consider.
+

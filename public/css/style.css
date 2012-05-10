@@ -241,6 +241,14 @@ body.blog-post article img {
   -webkit-box-shadow: 10px 10px 5px #888;
 }
 
+body.blog-post article .sfy-story {
+  border-top: 2px solid #333;
+}
+
+body.blog-post article .comments {
+  margin-top: 80px;
+}
+
 body.blog-post p {
   margin: 15px 0;
 }
