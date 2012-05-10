@@ -8,7 +8,11 @@ require('date-utils');
 
 var blogPosts = {
   byName: {},
-  directory: []
+  directory: [],
+  getPosts: function() {
+    var now = new Date();
+    return this.directory.filter(function(x){ if (x.date < now) { return x; } });
+  }
 };
 
 fs.readdir(PostPath, function(err, files) {
@@ -37,6 +41,7 @@ fs.readdir(PostPath, function(err, files) {
       blogPosts.directory.push(obj);
     }
   });
+
   // Date ordered directory
   blogPosts.directory.sort(function(a,b) {
     if (a.date > b.date) return -1;
@@ -53,7 +58,7 @@ var requestHost = function(req) {
 var blogMain = function(req, res) {
   res.render('blog', {
     title: false,
-    posts: blogPosts.directory,
+    posts: blogPosts.getPosts(),
     bodyClass: 'blog-main'
   })
 };
@@ -81,7 +86,7 @@ module.exports = {
   feed: function(req, res) {
     res.render('feed', {
       title: false,
-      posts: blogPosts.directory,
+      posts: blogPosts.getPosts(),
       layout: false
     })
   },

@@ -3,9 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  -moz-transition: all .25s linear;
-  -webkit-transition: all .25s linear;
-  transition: all .25s linear;
+
+}
+
+html {
+  min-height: 100%;
 }
 
 body {
@@ -13,6 +15,9 @@ body {
   background-image: -moz-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
   background-image: -webkit-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
   color: #555;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
 }
 
 a {
@@ -238,6 +243,10 @@ body.blog-post article img {
 
 body.blog-post p {
   margin: 15px 0;
+}
+
+.strike {
+  text-decoration: line-through;
 }
 
 @media screen and (max-width: 800px) {
