@@ -1,10 +1,10 @@
 doctype xml
 feed(xmlns='http://www.w3.org/2005/Atom')
   title Matt Sanford
-  description Blog posts on a variety of topics
-  link http://mzsanford.com/blog
-  link(rel='self') http://mzsanford.com/feed.atom
-  updated= posts[0].date
+  subtitle Blog posts on a variety of topics
+  link(rel="alternate", type="text/html", hreflang="en", href='http://mzsanford.com/blog')
+  link(rel='self', href='http://mzsanford.com/feed.atom')
+  updated= dateFormat(posts[0].date, "isoDateTime")
   id http://mzsanford.com/blog
   author
     name Matt Sanford
@@ -13,8 +13,8 @@ feed(xmlns='http://www.w3.org/2005/Atom')
   each post in posts
     entry
       title= post.title
-      published= post.date
-      link= 'http://mzsanford.com/blog/' + post.name
+      published= dateFormat(post.date, "isoDateTime")
+      link(href = 'http://mzsanford.com/blog/' + post.name)
       id= 'http://mzsanford.com/blog/' + post.name
       content(type='html')= post.snippet
       

@@ -2,6 +2,7 @@
 var PostPath = __dirname + '/../posts/';
 var fs = require('fs');
 var markdown = require("markdown").markdown;
+var dateFormat = require('dateformat');
 
 // Date formatting additions to Date
 require('date-utils');
@@ -93,7 +94,8 @@ module.exports = {
     res.render('feed', {
       title: false,
       posts: blogPosts.getPosts(),
-      layout: false
+      layout: false,
+      dateFormat: dateFormat
     })
   },
   
