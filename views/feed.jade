@@ -4,7 +4,7 @@ feed(xmlns='http://www.w3.org/2005/Atom')
   subtitle Blog posts on a variety of topics
   link(rel="alternate", type="text/html", hreflang="en", href='http://mzsanford.com/blog')
   link(rel='self', href='http://mzsanford.com/feed.atom')
-  updated= dateFormat(posts[0].date, "isoDateTime")
+  updated= dateFormat(posts[0].date, "isoDateTime") + 'Z'
   id http://mzsanford.com/blog
   author
     name Matt Sanford
@@ -13,7 +13,8 @@ feed(xmlns='http://www.w3.org/2005/Atom')
   each post in posts
     entry
       title= post.title
-      published= dateFormat(post.date, "isoDateTime")
+      published= dateFormat(post.date, "isoDateTime") + 'Z'
+      updated= dateFormat(post.date, "isoDateTime") + 'Z'
       link(href = 'http://mzsanford.com/blog/' + post.name)
       id= 'http://mzsanford.com/blog/' + post.name
       content(type='html')= post.snippet
