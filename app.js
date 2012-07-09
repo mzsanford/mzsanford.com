@@ -17,6 +17,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  app.use("/scholarship", express.static(__dirname + '/scholarship'));
   app.use('/blog', express.static(__dirname + '/posts'));
 });
 
@@ -26,6 +27,13 @@ app.configure('development', function(){
 
 app.configure('production', function(){
   app.use(express.errorHandler());
+});
+
+app.get('*', function(req, res, next){ 
+  if (req.headers.host.match(/^scholarship/)) {
+    req.url = '/scholarship' + req.url;  //append some text yourself
+  }
+  next(); 
 });
 
 // Routes
