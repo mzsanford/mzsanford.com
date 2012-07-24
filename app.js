@@ -31,7 +31,9 @@ app.configure('production', function(){
 
 app.get('*', function(req, res, next){ 
   if (req.headers.host.match(/^scholarship/)) {
-    req.url = '/scholarship' + req.url;  //append some text yourself
+    req.url = '/scholarship' + req.url;
+  } else if (req.headers.host.match(/^consulting/)) {
+    req.url = '/consulting' + req.url;
   }
   next(); 
 });
