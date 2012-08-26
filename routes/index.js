@@ -1,7 +1,7 @@
 
 var PostPath = __dirname + '/../posts/';
 var fs = require('fs');
-var markdown = require("markdown").markdown;
+var marked = require('marked');
 var dateFormat = require('dateformat');
 
 // Date formatting additions to Date
@@ -35,8 +35,8 @@ fs.readdir(PostPath, function(err, files) {
         }
       });
       obj.name = parts[0];
-      obj.snippet = markdown.toHTML(data[0]);
-      obj.body = markdown.toHTML(data.join("\n\n"));
+      obj.snippet = marked(data[0]);
+      obj.body = marked(data.join("\n\n"));
       
       if (obj.storify) {
         obj.body += "<h2 class=\"comments\">Comments on this post</h2>"
