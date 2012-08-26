@@ -213,6 +213,7 @@ body.blog-post article pre {
   overflow-x: auto;
   -webkit-overflow-scrolling: auto;
   padding: 6px;
+  margin-bottom: 15px;
   border: 1px solid #CCC;
   background: #EFEFEF;
   color: #000;
@@ -265,7 +266,7 @@ body.blog-post p {
   ol.posts li h2 {
     margin: 5px 0px 0px 0px;
   }
-  
+
   body.blog-post article {
     padding: 6px;
   }
@@ -276,7 +277,7 @@ body.blog-post p {
   ol.posts li {
     margin: 8px 8px 25px 8px;
   }
-  
+
   ol.posts li .meta {
     display: block;
   }
@@ -285,8 +286,13 @@ body.blog-post p {
   ol.posts li .meta a {
     padding: 0 5px;
   }
-  
+
+  body.blog-post article pre {
+    margin-bottom: 5px;
+  }
+
   body.blog-post article pre code {
     font-size: 12px;
   }
+
 }
