@@ -129,6 +129,10 @@ html, body { background-color: #eee; }
   background-color: transparent;
 }
 
+.scholarship .photo-box-inline {
+  margin: 10px auto;
+}
+
 .photo {
   background-size: cover;
   background-repeat: no-repeat;
@@ -149,6 +153,22 @@ html, body { background-color: #eee; }
 .photo-matt {
   background-image: url(../img/matt.jpg);
   background-position: left 75%;
+}
+
+.photo-adams {
+  background-image: url(../img/adams.jpg);
+  background-position: center top;
+  min-height: 250px;
+  width: 49%;
+  float: left;
+}
+
+.photo-heller {
+  background-image: url(../img/heller.jpg);
+  background-position: left top;
+  min-height: 250px;
+  width: 49%;
+  float: right;
 }
 
 .scholarship h1 {
