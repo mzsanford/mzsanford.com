@@ -139,11 +139,29 @@ html, body { background-color: #eee; }
   min-height: 200px;
   max-width: 950px;
   margin: auto;
+  position:relative; 
+  
   -webkit-transition: all 0.3s linear;  /* Saf3.2+, Chrome */
      -moz-transition: all 0.3s linear;  /* FF4+ */
       -ms-transition: all 0.3s linear;  /* IE10 */
        -o-transition: all 0.3s linear;  /* Opera 10.5+ */
           transition: all 0.3s linear;
+}
+
+.photo .caption {
+  position: absolute;
+  bottom: 5px;
+  text-align: left;
+  font-size: 14px;
+  color: #eee;
+  background: rgba(0,0,0,0.5);
+  padding: 0 10px;
+  line-height: 2.3em;
+}
+
+.photo .caption-right {
+  right: 0px;
+  padding-right: 10px;
 }
 
 .photo-ruth {
@@ -165,7 +183,7 @@ html, body { background-color: #eee; }
 
 .photo-heller {
   background-image: url(../img/heller.jpg);
-  background-position: left top;
+  background-position: center 20%;
   min-height: 250px;
   width: 49%;
   float: right;
@@ -285,6 +303,9 @@ footer {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+  }
+  .photo .caption {
+    font-size: 12px;
   }
   .scholarship h1 { font-size: 35px; }
 }
