@@ -212,7 +212,7 @@ html, body { background-color: #eee; }
   font-weight: 600;
   padding: 0 4px 4px 4px;
 }
-.scholarship p, .scholarship div { font-size: 18px; font-weight: 200; padding: 10px; line-height: 1.2em; }
+.scholarship p, .scholarship .fb-box { font-size: 18px; font-weight: 200; padding: 10px; line-height: 1.2em; }
 .scholarship ol { font-size: 16px; font-weight: 200; }
 .scholarship ol li { line-height: 1.6em; margin-left: 2em; }
 
