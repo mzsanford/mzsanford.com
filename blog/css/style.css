@@ -1,0 +1,339 @@
+/* Site-wide style */
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background-color: white;
+  background-image: -moz-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
+  background-image: -webkit-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
+  color: #555;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 0 4px;
+}
+
+a:hover {
+  color: #00B7FF;
+  -webkit-transition:color 0.15s ease-in;
+  -moz-transition:color 0.15s ease-in;
+}
+
+@-webkit-keyframes animBreath {
+  50% {
+    color: #FF0800;
+  }
+}
+
+/* Heading (all pages) */
+
+header {
+  margin: 20px auto;
+  width: 800px;
+  min-height: 180px;
+  padding-top: 70px;
+  text-align: center;
+}
+
+header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+}
+
+header h1 a {
+  -webkit-animation: animBreath 3s 1 ease-in-out 10s;
+  -moz-animation: animBreath 3s 1 ease-in-out 10s;
+}
+
+header h2 {
+  background: #F1F1F1;
+  background-image: -webkit-linear-gradient( #f8f8f8, #eee);
+  background-image: -moz-linear-gradient( #f8f8f8, #eee);
+  border-radius: 3px;
+  color: #666;
+  display: inline-block;
+  padding: 6px 15px;
+}
+
+/* Footer */
+footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  bottom: 8px;
+}
+
+footer .copy {
+  padding: 5px;
+  float: left;
+}
+
+footer .contact {
+  padding: 5px;
+  float: right;
+}
+
+/* Content box */
+
+#contents {
+  padding: 20px;
+  background-color: #fff;
+  height: auto;
+  margin: 0 auto;
+  width: 800px;
+}
+
+/* Navigation style (first page) */
+
+nav {
+  border-bottom: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  margin-bottom: 25px;
+  padding: 10px;
+  text-align: center;
+  width: 800px;
+}
+
+nav ol {
+  list-style-type: none;
+}
+
+nav ol li {
+  display: inline;
+}
+
+nav ol li a {
+  color: #111;
+  margin: 4px 15px;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    width: 100%;
+  }
+
+  header h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  #contents {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav {
+    width: 80%;
+    padding: 8px 10%;
+  }
+
+  nav ol li {
+    margin: 8px 0;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    min-height: 20px;
+    padding-top: 20px;
+  }
+
+  header h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ol li {
+    border-bottom: 1px solid #eee;
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Blog list-specific styles */
+
+ol.posts li {
+  list-style-type: none;
+}
+
+ol.posts li h2 {
+  margin: 10px 0 0px -30px;
+  color: #333;
+}
+
+ol.posts li .meta,
+ol.posts li .meta a {
+  margin: 0;
+  padding: 0 20px;
+}
+
+ol.posts li .meta a {
+  padding: 0;
+}
+
+/* Blog post-specific styles */
+
+body.blog-post a.back {
+  display: block;
+  padding: 5px 5px 15px 5px;
+}
+
+body.blog-post article a {
+  font-weight: bold;
+  padding: 0;
+  color: #39f;
+}
+
+body.blog-post article a:hover {
+  color: #00B7FF;
+  -webkit-transition:color 0.15s ease-in;
+  -moz-transition:color 0.15s ease-in;
+}
+
+/* Used outside of code blocks. Tricky. */
+body.blog-post article pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: auto;
+  padding: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #CCC;
+  background: #EFEFEF;
+  color: #000;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+body.blog-post article code {
+  color: #000;
+}
+
+body.blog-post article ul {
+  margin: 5px 20px;
+  line-height: 1.2em;
+}
+
+body.blog-post article h4 {
+  margin-top: 18px;
+}
+
+body.blog-post article img {
+  border: 1px solid #333;
+  max-width: 800px;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+}
+
+body.blog-post article .sfy-story {
+  border-top: 2px solid #333;
+}
+
+body.blog-post article .comments {
+  margin-top: 80px;
+}
+
+body.blog-post p {
+  margin: 15px 0;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 800px) {
+  ol.posts li div {
+    padding: 8px 10px;
+  }
+
+  ol.posts li h2 {
+    margin: 5px 0px 0px 0px;
+  }
+
+  body.blog-post article {
+    padding: 6px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  ol.posts li {
+    margin: 8px 8px 25px 8px;
+  }
+
+  ol.posts li .meta {
+    display: block;
+  }
+
+  ol.posts li .meta,
+  ol.posts li .meta a {
+    padding: 0 5px;
+  }
+
+  body.blog-post article pre {
+    margin-bottom: 5px;
+  }
+
+  body.blog-post article pre code {
+    font-size: 12px;
+  }
+
+}
+
+/*  ----- For CSS progress bar post ---- */
+.progress-bar {
+    border: 1px solid #333;
+    width: 300px;
+    height: 14px;
+    padding: 1px;
+    margin: 0;
+    background-color: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.progress-bar .label {
+    position: absolute;
+    width: 300px;
+    text-align: center;
+    font-size: 12px;
+    height: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.progress-bar .fill {
+    position: relative;
+    border: 1px solid #4682b4;
+    background: #4682b4;
+    overflow: hidden;
+    height: 12px;
+    width: 52%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.progress-bar .fill .label {
+  margin-top: -1px;
+  color: #fff;
+}

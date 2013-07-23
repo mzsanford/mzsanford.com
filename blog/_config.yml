@@ -1,0 +1,4 @@
+name: Your New Jekyll Site
+pygments: true
+excerpt_separator: "\n\n"
+markdown: rdiscount

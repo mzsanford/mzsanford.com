@@ -1,0 +1,18 @@
+---
+layout: default
+title: Matt Sanford – Blog
+---
+
+<div id="contents">
+  <ol class="posts">
+  {% for post in site.posts %}
+    <li>
+      <h2>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="meta">Posted: {{ post.date | date: "%Y-%m-%d" }}</span>
+      </h2>
+      <div>{{ post.excerpt }}</div>
+    </li>
+  {% endfor %}
+  </ol>
+</div>
