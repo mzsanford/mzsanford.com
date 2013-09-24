@@ -236,10 +236,7 @@ body.blog-post article h4 {
 }
 
 body.blog-post article img {
-  border: 1px solid #333;
   max-width: 800px;
-  -moz-box-shadow: 10px 10px 5px #888;
-  -webkit-box-shadow: 10px 10px 5px #888;
 }
 
 body.blog-post article .sfy-story {
@@ -248,6 +245,14 @@ body.blog-post article .sfy-story {
 
 body.blog-post article .comments {
   margin-top: 80px;
+}
+
+body.blog-post article blockquote {
+  padding: 1em 2em;
+  margin: 0;
+  font-style: italic;
+  text-align: justify;
+  background-color: #eee;
 }
 
 body.blog-post p {

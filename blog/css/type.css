@@ -56,7 +56,8 @@ nav ol li a {
 
 /* Blog */
 
-ol.posts li h2 {
+ol.posts li h2,
+body.blog-post h2 {
   font-family: 'Oswald', Helvetica, Arial, sans-serif;
   font-size: 22px;
 }
@@ -87,7 +88,7 @@ body.blog-post article code {
   ol.posts li h2 {
     font-size: 18px;
   }
-  
+
   ol.posts li {
     font-size: 15px;
   }
