@@ -1,6 +1,7 @@
 ---
 title: Sub-Glyph Colored CSS Progress Bar
 date: 2012-08-26 04:01:00
+
 permalink: blog/sub-glyph-colored-css-progress-bar/index.html
 layout: post
 ---

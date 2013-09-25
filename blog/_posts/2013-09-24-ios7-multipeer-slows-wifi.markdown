@@ -1,6 +1,7 @@
 ---
 date: 2013-09-24 11:00:00
 title: iOS 7 Multipeer Browsing Causes Wi-Fi Congestion
+tags: ios7
 
 permalink: blog/ios7-multipeer-wifi-slow/index.html
 layout: post

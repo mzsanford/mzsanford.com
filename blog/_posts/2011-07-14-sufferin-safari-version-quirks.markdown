@@ -1,6 +1,7 @@
 ---
 date: 2011-07-14 12:06:24
 title: Sufferin' Safari&#58; Quirks Between Safari Versions
+tags: i18n unicode
 
 permalink: blog/sufferin-safari-version-quirks/index.html
 layout: post

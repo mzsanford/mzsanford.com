@@ -191,6 +191,29 @@ ol.posts li .meta a {
 
 /* Blog post-specific styles */
 
+body.blog-post ul.tags {
+  list-style-type: none;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+body.blog-post ul.tags li.title {
+  color: #000;
+}
+
+body.blog-post ul.tags li {
+  display: inline-block;
+  margin-left: 3px;
+}
+
+body.blog-post ul.tags li a {
+  padding: 2px 4px;
+  background-color: #ddd;
+  border-radius: 3px;
+  color: #666;
+}
+
 body.blog-post a.back {
   display: block;
   padding: 5px 5px 15px 5px;
@@ -294,6 +317,10 @@ body.blog-post p {
   ol.posts li .meta,
   ol.posts li .meta a {
     padding: 0 5px;
+  }
+
+  body.blog-post ul.tags {
+    font-size: 20px;
   }
 
   body.blog-post article pre {

@@ -1,6 +1,7 @@
 ---
 date: 2012-09-30 11:00:00
 title: Scatter/Gather HTTP in Ruby
+tags: ruby
 
 permalink: blog/scatter-gather-http-in-ruby/index.html
 layout: post

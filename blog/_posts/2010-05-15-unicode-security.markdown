@@ -1,6 +1,8 @@
 ---
 date: 2010-05-15 19:33:21
 title: Unicode Security&#58; Yes, there is such a thing
+tags: unicode
+
 permalink: blog/unicode-security/index.html
 layout: post
 ---

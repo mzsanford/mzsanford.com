@@ -4,6 +4,15 @@ body_classes: long-form blog-post
 ---
 
 <div id="contents">
+  {% if page.tags != empty %}
+    <ul class="tags">
+      <li class="title">file under: </li>
+    {% for tag in page.tags %}
+      <li><a href="https://twitter.com/search?q=%23{{ tag }}">#{{ tag }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
   <a href="/blog.html" class="back">&larr; Back to main blog index</a>
   <article>
   <h2>{{ page.title }}</h2>
