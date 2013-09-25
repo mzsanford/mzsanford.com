@@ -26,9 +26,9 @@ without any direction. It's best to break with any confusing directionality
 and think of the bytes as running in a single top-to-bottom line. Here's some
 sample english text to belabor the point:
 
-    
-    abcd  0x61 0x62 0x63 0x64  
-    becomes:  
+
+    abcd  0x61 0x62 0x63 0x64
+    becomes:
     a  0x61
     b  0x62
     c  0x63
@@ -65,7 +65,7 @@ handling right-to-left layout. I've never designed a text layout engine … it's
 hard and the OS native ones do a great job. I'm not writing this to explain
 how to write a layout engine. Firstly it's a complicated subject of which I
 only know what I need, and secondly I would caution anyone against writing
-such a thing again** **. What I want to cover is the basics of how the bytes
+such a thing again. What I want to cover is the basics of how the bytes
 in the same order as Latin scripts end up the other direction. Oddly that
 contrast is best covered in the next section, where you'll see them together.
 
@@ -79,8 +79,8 @@ names are a perfect example of that. The basis of directionality in Unicode is
 that all **directionality is defined on a per-character basis**. I'll start
 with an example and explain from there.
 
-    
-    Text: abابab  
+
+    Text: abابab
     Unicode Bytes     Letter
     ------- --------- ------
     U+0061  0x61      a
@@ -119,15 +119,15 @@ post isn't about Arabic letter forms but it shows where text layout engines
 are more complicated than people think. Let's look at one quick example of
 what characters I type versus what is displayed.
 
-    
-    I Type (and store in a file): ل ل ل  
+
+    I Type (and store in a file): ل ل ل
     Unicode Bytes     Letter
     ------- --------- ------
     U+0644  0xD984    ل
     U+0644  0xD984    ل
-    U+0644  0xD984    ل  
-    Displayed As: للل  
-    Which are actually the characters …  
+    U+0644  0xD984    ل
+    Displayed As: للل
+    Which are actually the characters …
     Unicode Bytes     Letter
     ------- --------- ------
     U+FEDF  0xEf889F  ﻟ
