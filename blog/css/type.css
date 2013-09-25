@@ -62,6 +62,10 @@ body.blog-post h2 {
   font-size: 22px;
 }
 
+body.blog-post h2 {
+  margin-left: -2em;
+}
+
 ol.posts li .meta,
 ol.posts li .meta a {
   font-size: 16px;
@@ -81,7 +85,10 @@ body.blog-post article code {
   font-family: 'Courier', monospace;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+  body.blog-post h2 {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {

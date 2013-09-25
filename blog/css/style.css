@@ -276,6 +276,10 @@ body.blog-post p {
     padding: 6px;
   }
 
+  body.blog-post article img {
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
