@@ -6,7 +6,7 @@ permalink: blog/dvds-to-apple-tv/index.html
 layout: post
 ---
 
-I stream my music and store my pictures online. Home stereos moved from single CD to the multi-disc carousel but DVD players have remained oddly 
+I stream my music and store my pictures online. Home stereos moved from single CD to the multi-disc carousel but DVD players have remained oddly
 behind the times. There are a few DVD changers on the market but that's only a stop gap solution and it requires that you plan ahead for what you're
 going to watch. I was in search of a way to have every movie I own just a few clicks away. I've found a solution via Apple TV, my Mac
 and [RipIt](http://thelittleappfactory.com/ripit/). I spent time searching online and there wasn't much out there so I hope this post answers at
@@ -15,7 +15,7 @@ to work out of the box.
 
 ### Disclaimers and Bullshit
 
-Here is where I say that copying DVDs for your own personal use (format shifting) *may* be prohibited by law. It depends on where you live and 
+Here is where I say that copying DVDs for your own personal use (format shifting) *may* be prohibited by law. It depends on where you live and
 what way the political wind is blowing. All of that aside I looked to iTunes for my justification. While Apple would love to sell me music I
 would never switch to iTunes if there was no way to import CDs I already own. I bought and Apple TV so I could both buy content and so I could
 import the content I already own.
@@ -23,7 +23,7 @@ import the content I already own.
 ### One DVD, Start to Finish
 
 The latest version of [RipIt](http://thelittleappfactory.com/ripit/) will copy entire DVDs to your hard drive and also compress them into smaller,
-Apple TV compatible formats. The conversion is done by [Handbrake](http://handbrake.fr/) under the covers but RipIt does a great job of handling 
+Apple TV compatible formats. The conversion is done by [Handbrake](http://handbrake.fr/) under the covers but RipIt does a great job of handling
 installing and configuring Handbrake, which is not a novice activity. You can feel free to forget all of that but it might be helpful to know.
 
 #### Step 1: Rip the DVD
@@ -33,14 +33,14 @@ installing and configuring Handbrake, which is not a novice activity. You can fe
  * **Step 3**: Click the "Rip it" button (second image)
  * **Step 3.a**: wait 45-60 minutes, depending (third image)
  * **Step 4**: Eject the DVD (completed in image four)
- 
+
 ![Open RipIt and insert a DVD]({{ site.url }}/assets/dvds-to-apple-tv/ripit-1.png)
 ![Click the "Ript it" button]({{ site.url }}/assets/dvds-to-apple-tv/ripit-2.png)
 ![Watch the pretty spinner]({{ site.url }}/assets/dvds-to-apple-tv/ripit-3.png)
 ![All's done]({{ site.url }}/assets/dvds-to-apple-tv/ripit-4.png)
 
 Thats all. RipIt will place a `.dvdmedia` file in your `Movies` folder and helpfully open a window to it when it's done. You may notice that there
-is a "Compress" button in RipIt. I do this in two steps instead for a few reasons. The main reason is for flow (described below) but the 
+is a "Compress" button in RipIt. I do this in two steps instead for a few reasons. The main reason is for flow (described below) but the
 other reason is that if a compression fails it's much faster to re-try from your computer rather than re-reading from the DVD.
 
 #### Step 2: Compress the Movie
@@ -54,16 +54,16 @@ for something a little less specialized in exchange for slightly bigger files. S
  * **Step 1**: Drag the `.dvdmedia` file onto the RipIt window
  * **Step 2**: There is no step two. It already started doing the work. (it should look like the second image)
  * **Step 3**: Wait a long time for it to finish.
- 
+
 ![Preferences, preferable]({{ site.url }}/assets/dvds-to-apple-tv/ripit-prefs.png)
 ![Compressing a single movie]({{ site.url }}/assets/dvds-to-apple-tv/ripit-5.png)
 
 #### Step 3: Annotating (optional)
 
-While this step is purely optional it's a small amount of time you can invest for a much more professional outcome. When DVDs are imported into 
+While this step is purely optional it's a small amount of time you can invest for a much more professional outcome. When DVDs are imported into
 iTunes they don't have any information like year, actors, description or cover art. When you browse from your Apple TV that can make it hard to
-tell everything apart. There is a program named [MetaX](http://www.kerstetter.net/index.php/projects/software/metax) that I've been using to add
-information to my compressed movies. MetaX has its own documentation but it's very handy to have an editor for all of the movie information.
+tell everything apart. There was a program named **MetaX** that I had been using to add
+information to my compressed movies but development has been discontinued since I first wrote this post. The best successor is [MetaZ](http://griff.github.io/metaz/) though I don't have any direct experience with that.
 
 #### Step 4: Streaming the Movies
 
