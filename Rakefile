@@ -26,6 +26,15 @@ namespace :build do
   end
 end
 
+namespace :serve do
+  desc 'Run a local server for the blog site'
+  task :blog do
+    Dir.chdir("blog") do
+      sh "jekyll serve -w"
+    end
+  end
+end
+
 namespace :deploy do
   SITES = %w{ scholarship blog }
 
