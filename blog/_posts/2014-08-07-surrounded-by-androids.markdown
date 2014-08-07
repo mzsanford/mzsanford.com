@@ -1,5 +1,5 @@
 ---
-date: 2014-08-09 18:00:00
+date: 2014-08-07 16:40:00
 title: Surrounded by Androids - A Childhood Story
 
 permalink: blog/surrounded-by-androids/index.html
