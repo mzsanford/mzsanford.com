@@ -11,7 +11,7 @@ This was how I coped with the idea that every person had as complex a back story
 
 ## Infinity +1
 
-Like most children I would invoke "infinity plus 1" when faced with "yes times infinity" and its ilk. There is nothing surprising in this but it shows a deep misunderstanding of infinity as just *the biggest number*. I was well into adulthood before I feel I understood infinity as the awesome and terrifying thing that it is. If you find it easy to explain and you're not vaguly uncomfortable with it I think you're underestimating it.
+Like most children I would invoke "infinity plus 1" when faced with "yes times infinity" and its ilk. There is nothing surprising in this but it shows a deep misunderstanding of infinity as just *the biggest number*. I was well into adulthood before I feel I understood infinity as the awesome and terrifying thing that it is. If you find it easy to explain and you're not vaguely uncomfortable with it I think you're underestimating it.
 
 Equating infinity to the largest number is why I say I considered the collection of all human experience as infinite. I was a child saying "infinity plus 1" on the playground and still the scale of human history was mind boggling. It was so mind boggling I concocted an elaborate fantasy to help me avoid thinking about it anymore.
 
