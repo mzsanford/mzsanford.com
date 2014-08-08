@@ -5,11 +5,14 @@ Bundler.setup
 
 require 's3_uploader'
 
+
 def s3_upload(bucket_name, directory)
+  Fog.credentials = { path_style: true }
   S3Uploader.upload_directory(directory, bucket_name, {
     :s3_key    => ENV['MZS_AWS_ACCESS_KEY'],
     :s3_secret => ENV['MZS_AWS_SECRET'],
-    :public    => true
+    :public    => true,
+    :path_style => true
   })
 end
 
