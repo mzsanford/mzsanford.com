@@ -10,7 +10,7 @@ HTTP caching is critical to networked application on mobile devices. While tunin
 
 ## The `Accept`able Question
 
-This all came up because of a library that used the `Accept` header to communicate the requested API version (`Accept: application/json;version=1`) instead of the URL path (`/api/v1/…`). I was initially against the idea but that sort of gut reaction is not enough. It could easily be a better approach and how would I know until I actually test my preconceptions? So, off I went to test a few things.
+This all came up because of a library that used the `Accept` header to communicate the requested API version<label for="sn-demo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-demo" class="margin-toggle"/><span class="sidenote">`Accept: application/json;version=1`</span> instead of the URL path<label for="sn-demo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-demo" class="margin-toggle"/><span class="sidenote">`/api/v1/…`</span>. I was initially against the idea but that sort of gut reaction is not enough. It could easily be a better approach and how would I know until I actually test my preconceptions? So, off I went to test a few things.
 
 There are a few issues to consider about the `Accept` header approach to API versioning but there was one that I couldn't even list pros and cons for. I couldn't be sure was how it would effect the cache on the client. I have worked with [Varnish](https://www.varnish-cache.org) for HTTP caches in the past and I remembered the various `Accept` and `Vary` header issues for internationalization.
 
@@ -25,7 +25,7 @@ One quick [example iOS app](https://github.com/mzsanford/URLCacheTest) later and
     2013-11-12 14:05:39.404 URLCacheTest[13227:70b] Sending accept header value: api/v3
     2013-11-12 14:05:39.407 URLCacheTest[13227:70b] CACHED: Non-error response code with 65084 bytes of data: 0.001124 sec
 
-I did also did an additional test of `https://www.varnish-cache.org`, which returns `Vary: Cookie,Accept-Encoding`, and altered the `Accept-Encoding` header with the same result.
+I did also did an additional test of [Varnish](`https://www.varnish-cache.org`), which returns `Vary: Cookie,Accept-Encoding`, and altered the `Accept-Encoding` header with the same result.
 
 ## Conclusion
 

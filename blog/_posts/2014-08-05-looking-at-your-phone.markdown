@@ -23,4 +23,4 @@ I am making an effort to think of my phone as a knowledgeable friend. Someone I 
  * Toddler napping? Check.
  * Quiet moment between other conversations? *Maybe* … it's easy to let that drift on too long.
 
-Conversation: "[Her life is in your hands, Dude.](http://www.imdb.com/title/tt0118715/quotes?item=qt0520371)".
+Conversation: Her life is in your hands, Dude.<label for="sn-demo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-demo" class="margin-toggle"/><span class="sidenote">[The Big Lebowski](http://www.imdb.com/title/tt0118715/quotes?item=qt0520371)</span>

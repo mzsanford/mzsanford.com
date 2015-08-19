@@ -25,7 +25,7 @@ No, seriously. Take a few days and think about your hobbies and interests. Think
 
 ## My Hobbies and Interests (for example)
 
-* I used to play **rugby**, when I lived in Virginia. I was really no good at it but I played for three years. I was too small to be a forward and a bit slow on the wing. They put me on the wing anyway and my speed and fitness improved but my tackling was still atrocious. All of this failing and playing a team sport didn't teach me much about team work. It didn't teach me much about accepting defeat, as I still don't do that well. What it did teach me didn't surface until about a year ago when I started to think about my hobbies and interests in relation to work. Here are some whose work applications are pretty obvious:
+I used to play **rugby**, when I lived in Virginia. I was really no good at it but I played for three years. I was too small to be a forward and a bit slow on the wing. They put me on the wing anyway and my speed and fitness improved but my tackling was still atrocious. All of this failing and playing a team sport didn't teach me much about team work. It didn't teach me much about accepting defeat, as I still don't do that well. What it did teach me didn't surface until about a year ago when I started to think about my hobbies and interests in relation to work. Here are some whose work applications are pretty obvious:
 
   * There are all sizes of men on a rugby team, and everyone has a part to play.
     * Having said that, unlike american football, you can't specialize for a single part. You have a part you should be the best at but you have to know the other parts should the situation call for you to play them.
@@ -33,14 +33,14 @@ No, seriously. Take a few days and think about your hobbies and interests. Think
   * Even when you can only pass backward you can move the ball toward the goal line.
   * The ball isn't round and the bounce can be unlucky. Deal with it.
 
-* I've been **rock climbing** (bouldering, mostly) for about four years. In that time I've enjoyed it and it's helped with my overall balance and fitness. I usually climb with someone else but I sometimes go alone as well. Bouldering does not involve ropes so the obvious trust lessons are not really in play. Instead I've learned:
+I've been **rock climbing** (bouldering, mostly) for about four years. In that time I've enjoyed it and it's helped with my overall balance and fitness. I usually climb with someone else but I sometimes go alone as well. Bouldering does not involve ropes so the obvious trust lessons are not really in play. Instead I've learned:
 
   * Fitness is important, but not nearly as important as technique. I've seen people more overweight than me surpass me. I've see the ultra-fit fall off of the lowest rated routes. At some level fitness is the limiting factor but nearly always there is a technique that can best the situation without brute strength.
     * Related: Strength can be substituted for technique for a short time while technique can replace strength much longer.
     * Related: Despite it being a lack of technique defeating someone they will invariably blame strength.
   * It's best to plan from the ground but on the rock those insights often prove to be wrong. Don't stop planning but try to plan multiple approaches from which you can choose when the time comes.
 
-* I'm very interested in **languages**, especially word origins and how different languages express slight variations in feeling. I speak some German and some Arabic as well as a smattering of (slang riddled) Spanish. I'm also interested in alphabets and writing systems. While this all has a very direct relation to my last job in internationalization the interest came first and led to the job. As an interest it has taught me some other things:
+I'm very interested in **languages**, especially word origins and how different languages express slight variations in feeling. I speak some German and some Arabic as well as a smattering of (slang riddled) Spanish. I'm also interested in alphabets and writing systems. While this all has a very direct relation to my last job in internationalization the interest came first and led to the job. As an interest it has taught me some other things:
 
   * It doesn't matter what you think you said, it's what they heard.
     * Related: Your choice of words is important. Anyone who says otherwise was just caught expressing feelings they meant to hide.
