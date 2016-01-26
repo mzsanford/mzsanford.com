@@ -42,9 +42,9 @@ default  has a different root cause but I want to cover it here so the two
 issues are not confused with each other. Here are how some of the most common
 issue surface:
 
-  * Attempting to update a record where a `varchar` column changed only by a single accent will return success but not save the change 
+  * Attempting to update a record where a `varchar` column changed only by a single accent will return success but not save the change
     * This makes spelling corrections in record seem to "not save".
-  * A row can be inserted successfully but when it is re-read the `varchar` column is empty or missing characters. 
+  * A row can be inserted successfully but when it is re-read the `varchar` column is empty or missing characters.
     * This is the case with the Ruby driver at least, probably others.
   * Unique constraints on `varchar` columns will fail despite different text if the differences are all outside of the BMP.
   * You can't store the new Emoji characters, or they seem to disappear.
@@ -61,9 +61,12 @@ support the rest of Unicode. Here's the rub: "the rest of Unicode" is an
 expanding set and when it passed a certain boundary UTF-8 needed 4 bytes to
 handle it. Let's have an example:
 
-` 1 byte  (0000-007F): "A"  ➔ 0x41 2 bytes (0080-07FF): "Ж" ➔ 0xD0 0x96 3
-bytes (0800-FFFF): "龍" ➔ 0xE9 0xBE 0x8D 4 bytes (> FFFF)   : "В" ➔ 0xF0 0x90
-0x90 0x92`
+<pre clas="code">
+    1 byte  (0000-007F): "A"  ➔ 0x41
+    2 bytes (0080-07FF): "Ж" ➔ 0xD0 0x96
+    3 bytes (0800-FFFF): "龍" ➔ 0xE9 0xBE 0x8D
+    4 bytes (> FFFF)   : "В" ➔ 0xF0 0x90 0x90 0x92
+</pre>
 
 As you can see above, that last character takes 4 bytes in UTF-8 while MySQL
 only expects 1-3 bytes per character. Without getting into too many Unicode
@@ -93,13 +96,16 @@ the common misunderstandings around MySQL collation and specifically the
 `utf_general_ci`/`utf_uncode_ci` collation sequences. This is probably best
 illustrated with an example:
 
-` mysql> select "bar" = "bär" COLLATE utf8_unicode_ci\G
-*************************** 1. row *************************** "bar" = "bär"
-COLLATE **utf8_unicode_ci: 1** mysql> select "bar" = "bär" COLLATE
-utf8_general_ci\G *************************** 1. row
-*************************** "bar" = "bär" COLLATE **utf8_general_ci: 1**
-mysql> select "bar" = "bär" COLLATE utf8_bin\G *************************** 1.
-row *************************** "bar" = "bär" COLLATE **utf8_bin: 0** `
+```
+    mysql> select "bar" = "bär" COLLATE utf8_unicode_ci\G
+    *************************** 1. row ***************************
+    "bar" = "bär" COLLATE **utf8_unicode_ci: 1**
+    mysql> select "bar" = "bär" COLLATE utf8_general_ci\G
+    *************************** 1. row ***************************
+    mysql> select "bar" = "bär" COLLATE utf8_bin\G
+    *************************** 1. row ***************************
+    "bar" = "bär" COLLATE **utf8_bin: 0**
+```
 
 If your default collation is `utf_general_ci` or `utf_uncode_ci` then your
 database thinks "bar" and "bär" are the same word. If you have unique
