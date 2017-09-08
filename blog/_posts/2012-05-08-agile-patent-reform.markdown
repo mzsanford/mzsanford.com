@@ -18,7 +18,7 @@ Just because someone can think-up or design a software idea does not mean they h
 
 ## Failures in the current system
 
-The current system fails to level the playing field between small and large companies due to cost, os more specifically value. The cost to file a patent successfully is now more expensive than the perceived value of a patent. The only way this can be corrected is to either lower the cost to file a patent or to raise the value a patent provides. The "value" of a patent is currently in the ability to sue others infringing on them (making the "value" the average settlement or award amount). That system of values has given rise to the patent troll. The patent troll could not exist is it was not for the relative "liquidity" of patents (the ability to buy/sell/transfer them), and I think that's where the largest avenue for change exists. If there was a lower street value for patents then there would be less incentive to file useless patents.
+The current system fails to level the playing field between small and large companies due to cost, or more specifically value. The cost to file a patent successfully is now more expensive than the perceived value of a patent. The only way this can be corrected is to either lower the cost to file a patent or to raise the value a patent provides. The "value" of a patent is currently in the ability to sue others infringing on them (making the "value" the average settlement or award amount). That system of values has given rise to the patent troll. The patent troll could not exist if it was not for the relative "liquidity" of patents (the ability to buy/sell/transfer them), and I think that's where the largest avenue for change exists. If there was a lower street value for patents then there would be less incentive to file useless patents.
 
 ## Incremental changes
 
@@ -31,4 +31,3 @@ The other incremental change to make patents more meaningful is to **raise the b
 ## End Rant
 
 Providing a small, actionable change that limits the largest type of abuse seems obvious. I'm not sure why so many blog posts call for a complete dismantling of the patent system. I'm guessing it generates more readers. Screw that, I don't want readers – I want a reasonable discourse about change we can affect rather than hyperbole about a "solution" that is too radical for the people in charge of such things to even consider.
-

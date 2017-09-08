@@ -6,3 +6,7 @@
 article ul {
   list-style-type: disc;
 }
+
+footer {
+  margin-top: 1em;
+}
