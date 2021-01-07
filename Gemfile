@@ -2,7 +2,7 @@
 source 'https://rubygems.org'
 
 gem 's3_uploader', '~> 0.1.0'
-gem "jekyll", "~> 3.5.2"
+gem "jekyll", "~> 3.6.3"
 gem "rdiscount", "~> 2"
 
 gem 'rb-gsl', '~> 1.16.0.2'
