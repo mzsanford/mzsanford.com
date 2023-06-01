@@ -12,6 +12,15 @@
 
         <link rel="stylesheet" href="/css/tufte.css"/>
         <link rel="stylesheet" href="/css/site.css"/>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RGYJ5PZWCH"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-RGYJ5PZWCH');
+        </script>
     </head>
     <body class="{{ page.body_classes }}">
 
@@ -24,26 +33,11 @@
             {{ content }}
 
             <footer>
-              <span class="copy">&copy; 2018 Matt Sanford</span>
+              <span class="copy">&copy; 2023 Matt Sanford</span>
               <span class="contact">Contact: <a href="https://twitter.com/mzsanford">@mzsanford</a></span>
             </footer>
           </div>
         </div> <!-- /container -->
-
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-7956475-1']);
-      _gaq.push(['_setDomainName', 'mzsanford.com']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
 
     </body>
 </html>
