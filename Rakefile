@@ -54,7 +54,7 @@ namespace :deploy do
       s3_upload("#{site}.mzsanford.com", "#{site}/_site")
 
       # There is a root page with the same names as the sub-domain. Make it the index.
-      if File.exists?("#{site}/_site/#{site}.html")
+      if File.exist?("#{site}/_site/#{site}.html")
         puts "Setting #{site}.html as root document ..."
         connection = Fog::Storage.new({
           :provider              => 'AWS',

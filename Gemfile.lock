@@ -30,7 +30,6 @@ GEM
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
     forwardable-extended (2.6.0)
-    gsl (2.1.0.3)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -72,8 +71,6 @@ GEM
     public_suffix (4.0.6)
     racc (1.6.2)
     rb-fsevent (0.10.4)
-    rb-gsl (1.16.0.6)
-      gsl
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdiscount (2.2.0.2)
@@ -95,7 +92,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3)
   nokogiri (~> 1)
-  rb-gsl (~> 1)
   rdiscount (~> 2)
   s3_uploader (~> 0.1.0)
 
